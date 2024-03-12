@@ -1,0 +1,28 @@
+//Block
+//@param {String} $block - Block's name
+@mixin block($block) {
+  .#{$block} {
+    @content;
+  }
+}
+
+//Element
+//@param {String} $element - Element's name
+@mixin element($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+//Modifier
+//@param {String} $modifier - Modifier's name
+@mixin modifier($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}
+
+// 축약(설정필요)
+// bbk
+// bel
+// bmf

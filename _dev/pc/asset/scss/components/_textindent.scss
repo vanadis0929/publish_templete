@@ -1,0 +1,29 @@
+@use '../config';
+@use '../utils/mixins/breakpoint';
+@use '../utils/fnc/function';
+@use '../utils/mixins/size';
+@use '../utils/mixins/path';
+
+// textIndent(텍스트 앞 아이콘)
+.el_textIndent {
+  padding-left: 15px;
+  text-indent: -10px;
+}
+
+// Breakpoint
+// pc
+// @include breakpoint.breakPoint(config.$bp-desktop, config.$bp-deskWide) {}
+
+// mobile
+// @include breakpoint.breakPoint(config.$bp-mobile, config.$bp-tablet) {}
+
+// mixin: 기본값 10px, 블릿은 텍스트인 경우에만 사용
+@mixin textIndent($paddingLeft: 10px, $textIndent: 10px, $bullet: none) {
+  padding-left: $paddingLeft;
+  text-indent: $paddingLeft;
+  position: relative;
+
+  &::before {
+    content: $bullet;
+  }
+}

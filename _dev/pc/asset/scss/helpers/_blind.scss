@@ -1,0 +1,28 @@
+@use '../utils/mixins/bem';
+
+// blind
+@mixin blind() {
+  @include bem.block('hp_blind') {
+    position: absolute !important;
+    display: block;
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    border: 0 !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+
+    &.focusable:active,
+    &.focusable:focus {
+      position: static;
+      height: auto;
+      width: auto;
+      margin: 0;
+      clip: auto;
+      overflow: visible;
+    }
+  }
+
+  ;
+}

@@ -1,0 +1,125 @@
+@use "../utils/mixins/bem";
+@use "../config";
+@use "../utils/mixins/breakpoint";
+@use "../utils/mixins/size";
+@use "../utils/mixins/path";
+@use "../utils/fnc/function";
+@use "../utils/mixins/ellipsis";
+@use "../utils/mixins/scrollBarStyle";
+
+@mixin arrow($direction: "down", $width: 32px, $height: 32px) {
+  @if ($direction == "down") {
+    width: $width;
+    height: $height;
+    content: "";
+    background: {
+      position: center;
+      repeat: no-repeat;
+      size: 100%;
+      image: url(path.$COMMON_BG_URL + "icon-arrow-right.svg");
+    }
+    transform: rotate(90deg);
+  } @else if ($direction == "up") {
+    width: $width;
+    height: $height;
+    content: "";
+    background: {
+      position: center;
+      repeat: no-repeat;
+      size: 100%;
+      image: url(path.$COMMON_BG_URL + "icon-arrow-right.svg");
+    }
+    transform: rotate(-90deg);
+  } @else if ($direction == "left") {
+    width: $width;
+    height: $height;
+    content: "";
+    background: {
+      position: center;
+      repeat: no-repeat;
+      size: 100%;
+      image: url(path.$COMMON_BG_URL + "icon-arrow-right.svg");
+    }
+    transform: rotate(-180deg);
+  } @else if ($direction == "right") {
+    width: $width;
+    height: $height;
+    content: "";
+    background: {
+      position: center;
+      repeat: no-repeat;
+      size: 100%;
+      image: url(path.$COMMON_BG_URL + "icon-arrow-right.svg");
+    }
+  }
+}
+
+.bl_accordion {
+  --contentsPadding: 1rem;
+  --durationTime: 0.3s;
+  --easing: ease;
+  --delay: 0s;
+
+  &__item {
+    border-bottom: 1px solid var(--color-gc50);
+
+    &.is-open,
+    &[open] {
+      .bl_accordion__title:after {
+        // @include arrow('up');
+        transform: rotate(90deg) rotateY(180deg);
+      }
+
+      .bl_accordion__contents {
+        padding: var(--contentsPadding);
+        padding-block-start: 0;
+        grid-template-rows: 1fr;
+      }
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    padding: 1rem;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+
+    &:after {
+      flex: 0 0 32px;
+      margin-left: auto;
+      @include arrow("down");
+      transition: transform 0.4s;
+      align-self: flex-start;
+    }
+  }
+
+  &__contents {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    padding: var(--contentsPadding);
+    padding-block: 0;
+
+    &Inner {
+      min-height: 0;
+    }
+  }
+
+  &--animation {
+    .bl_accordion__contents {
+      transition:
+        grid-template-rows var(--durationTime, 0.3s) var(--delay, 0s) var(--easing, ease),
+        padding-block var(--durationTime, 0.3s) var(--delay, 0s) var(--easing, ease);
+    }
+  }
+}
+
+// Breakpoint
+// pc
+// @include breakpoint.breakPoint(config.$bp-desktop, config.$bp-deskWide) {}
+
+// mobile
+// @include breakpoint.breakPoint(config.$bp-mobile, config.$bp-tablet) {}

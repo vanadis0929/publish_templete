@@ -1,0 +1,107 @@
+@use "../utils/mixins/bem";
+@use "../config";
+@use "../utils/mixins/breakpoint";
+@use "../utils/mixins/size";
+@use "../utils/mixins/path";
+@use "../utils/fnc/function";
+@use "../utils/mixins/ellipsis";
+@use "../utils/mixins/scrollBarStyle";
+
+// list
+
+@mixin columnsRepeat($count: 4) {
+  grid-template-columns: repeat($count, 1fr);
+  // grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
+.bl_list {
+  margin: 20px 0;
+
+  &__item {
+    & ~ & {
+      margin-top: 10px;
+    }
+  }
+
+  &__itemBulletsr {
+    position: relative;
+    padding-left: 10px;
+
+    &:before {
+      position: absolute;
+      inset: 0 0 0 0;
+      content: "-";
+    }
+  }
+
+  &__itemBulletsr2 {
+    position: relative;
+    // padding-left: 20px;
+    display: flex;
+    gap: 5px;
+
+    &:before {
+      top: 7px;
+      left: 0;
+      content: "";
+      flex: 0 0 5px;
+      height: 5px;
+      aspect-ratio: 1/1;
+      border-radius: 100%;
+      background-color: currentColor;
+      align-self: baseline;
+      position: relative;
+    }
+  }
+
+  &--flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    & .bl_list {
+      &__item {
+        margin: 0;
+        transition: all 0.5s;
+
+        border: 1px solid var(--color-gc50);
+        border-radius: 10px;
+        padding: 1rem;
+        // flex: 1 1 auto;
+
+        &:hover {
+          box-shadow: 1px 1px 5px var(--color-gc50);
+        }
+      }
+    }
+  }
+
+  &--grid {
+    display: grid;
+    gap: 10px;
+
+    @include columnsRepeat(3);
+
+    & .bl_list {
+      &__item {
+        margin: 0;
+        transition: all 0.5s;
+
+        border: 1px solid var(--color-gc50);
+        border-radius: 10px;
+        padding: 1rem;
+
+        &:hover {
+          box-shadow: 1px 1px 5px var(--color-gc50);
+        }
+      }
+    }
+  }
+}
+
+// Breakpoint
+// pc
+// @include breakpoint.breakPoint(config.$bp-desktop, config.$bp-deskWide) {}
+
+// mobile
+// @include breakpoint.breakPoint(config.$bp-mobile, config.$bp-tablet) {}

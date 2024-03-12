@@ -1,0 +1,22 @@
+@use '../config';
+@use '../utils/mixins/ellipsis';
+@use '../utils/mixins/breakpoint';
+@use '../utils/fnc/function';
+
+// main Section Title
+@mixin mainSectionTitle() {
+  // main
+  .el_mainSecTit {
+  }
+
+  // sub title
+  .el_subTit {
+  }
+
+  // Breakpoint
+  // pc
+  // @include breakpoint.breakPoint(config.$bp-desktop, config.$bp-deskWide) {}
+
+  // mobile
+  // @include breakpoint.breakPoint(config.$bp-mobile, config.$bp-tablet) {}
+}

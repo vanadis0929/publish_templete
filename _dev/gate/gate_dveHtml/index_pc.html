@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=960" />
+    <title class="js_brwtit"></title>
+
+    <link rel="stylesheet" href="../gt_asset/css/markup.css" />
+    <script src="../gt_asset/js/markup.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  </head>
+
+  <body class="ly_mainBody">
+    <div class="ly_main_wrap">
+      <!-- header -->
+      @@include('../@gate_include/gate_required/gate_header.html')
+      <!-- // header -->
+
+      <div class="ly_main_inner">
+        <!-- mainTitle -->
+        @@include('../@gate_include/gate_required/gate_title.html')
+        <!-- // mainTitle -->
+
+        <!-- 현황판 Menu : 마크업 Table List 생성시 Menu 자동 생성-->
+        <section class="bl_sec bl_sec--progress">
+          <ul class="bl_progress">
+            <!-- 메뉴 리스트 동적 생성 -->
+          </ul>
+        </section>
+        <!-- // 현황판 Menu : 마크업 Table List 생성시 Menu 자동 생성 -->
+
+        <!-- { 마크업리스트 그룹 } -->
+
+        <!-- 공통 : DevMode -->
+        @@include('../@gate_include/gate_common-ui.html')
+        <!-- // 공통 : DevMode -->
+
+        <!-- main -->
+        @@include('../@gate_include/gate_main.html')
+        <!-- // main -->
+
+        <!-- // { 마크업리스트 그룹 } -->
+      </div>
+    </div>
+    <!-- script load -->
+    <script>
+      autoAddTrIndex();
+      listState();
+      listCount();
+      autoGNB();
+      deployMode();
+      historyFields();
+      totalPage();
+    </script>
+    <!-- // script load -->
+  </body>
+</html>

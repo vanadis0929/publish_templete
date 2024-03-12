@@ -1,0 +1,411 @@
+@use "../utils/mixins/bem";
+@use "../config";
+@use "../utils/mixins/breakpoint";
+@use "../utils/mixins/size";
+@use "../utils/mixins/path";
+@use "../utils/fnc/function";
+@use "../utils/mixins/scrollBarStyle";
+
+$inputSmallHeight: 32px;
+$inputMediumHeight: 40px;
+$inputLargeHeight: 48px;
+
+$inputSmallFontSize: 1.4rem;
+$inputMediumFontSize: 1.6rem;
+$inputLargeFontSize: 1.8rem;
+
+@mixin inputSize($type: small) {
+  @if ($type == small) {
+    min-height: $inputSmallHeight;
+    font-size: $inputSmallFontSize;
+  } @else if ($type == medium) {
+    min-height: $inputMediumHeight;
+    font-size: $inputMediumFontSize;
+  } @else if ($type == large) {
+    min-height: $inputLargeHeight;
+    font-size: $inputLargeFontSize;
+  }
+}
+
+.bl_input {
+  display: grid;
+  gap: 10px;
+
+  &__label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  &__inner {
+    &:not(.bl_input--flex) {
+      display: grid;
+      gap: 10px;
+    }
+
+    .bl_input__label {
+      margin: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .bl_input__item {
+      flex: 1 1 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: stretch;
+
+      gap: 10px;
+      position: relative;
+
+      &.bl_input--nowrap {
+        flex-wrap: nowrap;
+      }
+
+      .selectric .label {
+        display: flex;
+        align-items: center;
+      }
+
+      .bl_radioCheck {
+        align-self: center;
+      }
+
+      .bl_input--fileBox__label,
+      textarea,
+      input:not([type="checkbox"]):not([type="radio"]:not([type="file"])) {
+        flex: 1 1 auto;
+        // height: inherit;
+        border: {
+          width: 1px;
+          style: solid;
+          color: #e0e0e0;
+          radius: 8px;
+        }
+        padding-block: 10px;
+
+        &:not(.bl_input--fileBox__label) {
+          &:disabled {
+            cursor: not-allowed;
+            background-color: var(--color-gc20);
+          }
+
+          &:read-only {
+            background-color: var(--color-gc20);
+          }
+        }
+      }
+
+      &:not(.bl_input--nowrap) .el_btn:not(.el_btn--inputClose) {
+        height: auto;
+        padding-block: 10px;
+      }
+
+      &--nowrap {
+        flex-wrap: nowrap;
+        //텍스트의 정렬을 위해서
+        align-items: baseline;
+
+        .el_btn,
+        .bl_input__label {
+          flex: 0 0 auto;
+        }
+
+        .el_btn {
+          //버튼일때는 상단정렬로
+          align-self: flex-start;
+        }
+      }
+
+      &--error {
+        textarea,
+        input:not([type="checkbox"]):not([type="radio"]:not([type="file"])) {
+          border-color: config.$color-primary30;
+
+          &:focus-visible {
+            outline-color: config.$color-primary30;
+          }
+        }
+      }
+    }
+
+    .bl_input__closebtnWrap {
+      display: flex;
+      align-items: stretch;
+      position: relative;
+      flex: 1 1 auto;
+      gap: 10px;
+
+      > input {
+        flex: 1 1 auto;
+        padding-right: calc(24px + 10px);
+      }
+    }
+
+    &--flex {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      > .bl_input__item {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__validationMsg {
+    flex: 0 0 100%;
+    font-size: 1.4rem;
+    font-weight: 700;
+
+    &--valid {
+      color: config.$color-primary10;
+    }
+
+    &--error {
+      color: config.$color-primary30;
+    }
+  }
+
+  &--flex {
+    display: flex;
+    gap: 10px;
+
+    .bl_input {
+      &__item {
+        flex: 1 1 auto;
+      }
+
+      &__subText {
+        align-self: center;
+      }
+    }
+  }
+
+  &--fileBox {
+    position: relative;
+
+    .bl_input {
+      &--fileBox__label {
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    label.el_btn {
+      position: relative;
+      z-index: 5;
+    }
+
+    .el_input {
+      &.js_inputFile {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+
+        &:focus-within:focus-visible ~ label.el_btn {
+          outline: {
+            style: auto;
+            width: 1px;
+            color: -webkit-focus-ring-color;
+          }
+        }
+      }
+    }
+  }
+
+  .el_btn {
+    &--inputClose {
+      visibility: hidden;
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      width: 14px;
+      height: 14px;
+      transform: translateY(-50%);
+      filter: invert(1);
+      background: url(path.$COMMON_BG_URL + "btn_cancel.svg") no-repeat center / 100%;
+
+      &:hover {
+        background-color: transparent;
+      }
+
+      &.is_active {
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.el_input {
+  $nonTextboxInputs: "[type='checkbox'], [type='radio'], [type='file'], textarea";
+  $textboxInputs: ":not(#{$nonTextboxInputs})";
+
+  // textarea.el_input으로 렌더링
+  @at-root textarea#{&} {
+    width: 100%;
+    min-height: 150px;
+    padding: 10px;
+    flex: 1 1 auto;
+  }
+
+  //텍스트 상자들
+  &:not(#{$nonTextboxInputs}) {
+    padding-inline: 10px;
+  }
+
+  //체크박스, 라디오, 파일상자
+  &:not(#{$textboxInputs}) {
+    opacity: 1;
+  }
+
+  &_sm {
+    &:not(#{$nonTextboxInputs}) {
+      @include inputSize(small);
+    }
+  }
+
+  &_me {
+    &:not(#{$nonTextboxInputs}) {
+      @include inputSize(medium);
+    }
+  }
+
+  &_la {
+    &:not(#{$nonTextboxInputs}) {
+      @include inputSize(large);
+    }
+  }
+}
+
+.bl_radioCheck {
+  &:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+
+  &--flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+
+    [type="checkbox"],
+    [type="radio"] {
+      position: absolute;
+      top: 0;
+      border: none;
+      appearance: none;
+      height: 100%;
+      opacity: 0;
+
+      &:disabled {
+        ~ label {
+          color: var(--color-gc50);
+          cursor: not-allowed;
+
+          &::before {
+            background-color: lightgray;
+          }
+        }
+      }
+
+      & ~ label {
+        flex: 0 1 auto;
+        padding-left: 16px + 10px;
+
+        &:before {
+          position: absolute;
+          content: "";
+          @include size.size(16px);
+          top: 0;
+          left: 0;
+          background: var(--color-gc100) url(path.$COMMON_BG_URL + "btn_agree_off.svg") no-repeat center center;
+        }
+      }
+
+      &:not([checked]):checked,
+      &[checked]:checked {
+        & + label:before {
+          background-color: red;
+        }
+      }
+
+      &:focus-visible:focus-within ~ label {
+        outline: auto;
+      }
+    }
+
+    [type="radio"] {
+      &:not([checked]):checked,
+      &[checked]:checked {
+        & + label:before {
+          background-color: blue;
+          border-radius: 100%;
+        }
+      }
+    }
+  }
+}
+
+.bl_selectBox {
+  flex: 1 1 auto;
+  display: flex;
+
+  select {
+    flex: 0 1 100%;
+    visibility: hidden;
+  }
+
+  .selectric {
+    flex: 1 1 auto;
+    width: 100%;
+    min-height: 30px;
+    height: inherit;
+    font-size: 1.4rem;
+    border-color: var(--color-gc40);
+    border-radius: 8px;
+
+    label {
+      height: auto;
+    }
+
+    .button {
+      height: 100%;
+    }
+
+    &-wrapper {
+      display: flex;
+      flex: 1 1 auto;
+    }
+
+    &-scroll {
+      .highlighted,
+      li:hover,
+      li:focus-visible {
+        background-color: var(--color-gc100);
+        color: var(--color-gc10);
+      }
+      .selected {
+        background-color: var(--color-gc70);
+        color: var(--color-gc10);
+      }
+    }
+  }
+
+  &--sm .selectric .label {
+    @include inputSize(small);
+  }
+  &--me .selectric .label {
+    @include inputSize(medium);
+  }
+  &--la .selectric .label {
+    @include inputSize(large);
+  }
+}

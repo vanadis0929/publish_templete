@@ -1,0 +1,26 @@
+@use "../utils/mixins/bem";
+@use "../config";
+@use "../utils/mixins/breakpoint";
+@use "../utils/mixins/size";
+@use "../utils/mixins/path";
+@use "../utils/fnc/function";
+
+.bl_tabs {
+  &__item {
+  }
+
+  &Contents {
+    margin-top: 1rem;
+    padding: 2rem;
+    border: 1px solid var(--color-gc100);
+    border-radius: 20px / 10px;
+
+    [role="tabpanel"] {
+      display: none;
+
+      &.is_active {
+        display: block;
+      }
+    }
+  }
+}

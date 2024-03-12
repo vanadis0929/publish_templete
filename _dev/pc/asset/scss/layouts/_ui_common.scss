@@ -1,0 +1,167 @@
+@use "../fonts/fonts";
+/*▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣*/
+/*
+  * @Document     : Default-Sample
+  * @comment      : UI공통에 필요한 Layout Guide용
+*/
+/*▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣*/
+.commonWrap {
+  overflow: hidden;
+  padding: 50px 25px;
+}
+
+.commonWrap__title {
+  font-size: 3rem;
+  font-family: fonts.$pretendardVariable, sans-serif;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.sample-wrap {
+  margin: 20px 0;
+}
+
+.sample-content {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.sample-section {
+  margin-bottom: 50px;
+  font-size: 16px;
+  border-bottom: 2px dashed #333;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.sample-section__list {
+  border-bottom: 1px solid #e3e3e3;
+  margin-bottom: 120px;
+}
+
+.guide-title {
+  font-family: fonts.$notoKR, sans-serif;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 25px;
+  padding: 25px 0;
+  border-bottom: 2px solid #e12f36;
+}
+
+.h1-title {
+  font-family: fonts.$notoKR, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+.h2-title {
+  font-family: fonts.$notoKR, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.sample-group {
+  border: 1px solid #ddd;
+  padding: 10px 15px;
+
+  &:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+}
+
+.sample-group--border-none {
+  border: none;
+}
+
+.use-tag {
+  // margin-top: 10px;
+}
+
+.use-tag__code {
+  display: inline-block;
+  font-family: fonts.$notoKR, sans-serif;
+  color: #333;
+  background-color: #cff1f0;
+  border-radius: 4px;
+  padding: 6px 15px;
+  margin-bottom: 0.6rem;
+}
+
+.use-tag__code--class {
+  font-weight: 400;
+  background-color: #fedfe5;
+}
+
+.use-class {
+  margin-bottom: 10px;
+}
+
+.use-class__code {
+  font-family: fonts.$notoKR, sans-serif;
+  color: #333;
+  background-color: #cff1f0;
+  border-radius: 4px;
+}
+
+.sample-tag {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+
+  > p {
+    margin-bottom: 30px;
+  }
+}
+
+.sample-tag__tag-list {
+  padding-bottom: 10px;
+
+  > p {
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+}
+
+.sample-tag__tag-table {
+  > div {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    > dt,
+    > dd {
+      flex: 0 0 25%;
+      padding: 1rem;
+    }
+  }
+}
+
+.sample-tag__classSelect {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+
+  dl {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  dt {
+    margin-bottom: 20px;
+  }
+
+  select {
+    width: 100%;
+  }
+}
+
+.gradient-sample {
+  height: 40px;
+  background-color: #0c80ee;
+}

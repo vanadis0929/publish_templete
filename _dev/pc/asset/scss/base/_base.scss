@@ -1,0 +1,177 @@
+@charset "utf-8";
+@use "../config";
+@use "../fonts/fonts";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+html {
+  font:
+    #{config.$base-font-reset} / #{config.$base-line-height} fonts.$pretendardVariable,
+    sans-serif,
+    config.$base-font-family;
+  color: var(--color-gc100);
+  -webkit-text-size-adjust: none;
+
+  &[lang^="ko"] body {
+    word-break: keep-all;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+iframe,
+audio,
+video {
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+
+  &:before,
+  &:after {
+    content: "";
+    content: none;
+  }
+}
+
+details > summary::marker,
+details > summary::-webkit-details-marker {
+  content: "";
+  display: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: none;
+  border-top: 1px solid var(--color-gc50);
+  margin: 1em 0;
+  padding: 0;
+}
+
+dfn,
+address,
+em {
+  font-style: normal;
+}
+
+legend,
+caption {
+  display: none;
+  clear: both;
+}
+
+label[for] {
+  cursor: pointer;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+  vertical-align: middle;
+  border: none;
+  background-color: transparent;
+}
+
+input {
+  vertical-align: middle;
+  border: 1px solid var(--color-gc100);
+
+  &[type="number"]::-webkit-outer-spin-button,
+  &[type="number"]::-webkit-inner-spin-button {
+    margin: 0;
+    display: none;
+  }
+
+  &[type="search"] {
+    background-color: config.$color-gc10;
+
+    &::-webkit-search-decoration,
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-results-button,
+    &::-webkit-search-results-decoration {
+      color: config.$color-gc70;
+      -webkit-appearance: none;
+    }
+  }
+
+  &[type="checkbox"],
+  &[type="radio"] {
+    width: 13px;
+    height: 13px;
+    border-radius: 0;
+    border: 1px solid var(--color-gc100);
+    cursor: pointer;
+  }
+}
+
+::-webkit-input-placeholder {
+  color: var(--color-gc50);
+  opacity: 1;
+}
+
+::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+select {
+  cursor: pointer;
+  border: 1px solid var(--color-gc50);
+  color: var(--color-gc100);
+  border-radius: 0;
+}
+
+textarea {
+  resize: none;
+  border-radius: 0;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+a {
+  text-decoration: none;
+  color: config.$color-gc60;
+}

@@ -1,0 +1,82 @@
+@use '../../config';
+
+// 이미지url + cache buster
+@function image-url($str) {
+  $ran: random(99999999);
+
+  @if $cashFlag ==true {
+    @return url('#{$img}#{$str}?#{$ran}');
+  } @else {
+    @return url('#{$img}#{$str}');
+  }
+}
+
+@function iurl($str) {
+  @return image-url($str);
+}
+
+//반응형 레이아아웃 가변처리(Pixel을 Percent변환) 함수
+@function PercentForPixel($target, $container) {
+  /*
+	* $target     : 가변 변화 넓이
+	* $container  : container 넓이
+	* 예) width : PercentForPixel(400, 1000)
+	*/
+  @return calc($target / $container) * 100%;
+}
+
+//고정 이미지 값
+$designMaxWidth: 1440;
+$designMinWidth: 360;
+
+@function pxImg($target, $container: designMaxWidth) {
+  @return floor(($target * (designMinWidth / $container))) + px;
+}
+
+@function getPx($target, $container: designMaxWidth) {
+  @return floor(($target * (designMinWidth / $container))) + px;
+}
+
+//%
+@function pImg($target, $container: designMaxWidth) {
+  @return floor(($target / $container) * 100%);
+}
+
+@function getPer($target, $container: designMaxWidth) {
+  @return calc($target / $container) * 100%;
+}
+
+//rem
+@function remFont($target, $container: 15) {
+  @return calc(($target / 4) / $container) + rem;
+}
+
+@function getRem($target, $container: 15) {
+  @return calc($target / $container) + rem;
+}
+
+//문자열 replace
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+//svg 아이콘 불러올때 사용 (아이콘 타입, 색상)
+@function svgIcon($icon, $iconColor) {
+  @return str-replace($icon, '%23', '%23#{$iconColor}');
+}
+
+// vw
+@function vw($target, $container) {
+  @return calc(($target * 100) / $container) + vw;
+}
+
+// vh
+@function vh($target, $container) {
+  @return calc(($target * 100) / $container) + vh;
+}

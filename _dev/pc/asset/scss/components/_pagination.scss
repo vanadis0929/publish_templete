@@ -1,0 +1,21 @@
+@use '../utils/mixins/bem';
+@use '../config';
+@use '../utils/mixins/breakpoint';
+@use '../utils/mixins/size';
+@use '../utils/mixins/path';
+@use '../utils/fnc/function';
+
+// pagination
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 8px;
+  margin-top: 20px;
+}
+// Breakpoint
+// pc
+// @include breakpoint.breakPoint(config.$bp-desktop, config.$bp-deskWide) {}
+
+// mobile
+// @include breakpoint.breakPoint(config.$bp-mobile, config.$bp-tablet) {}

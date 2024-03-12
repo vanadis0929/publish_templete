@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 구축 asset -->
+    <link rel="stylesheet" href="../../asset/css/common.css" />
+    <link rel="stylesheet" href="../../asset/css/vendors/swiper-bundle-11.0.5.min.css" />
+
+    <script src="../../asset/js/plugins/jquery-3.7.0/jquery-3.7.0.min.js"></script>
+    <script src="../../asset/js/plugins/swiper-bundle-11.0.5/swiper-bundle.min.js"></script>
+
+    <!-- // 구축 asset -->
+
+    <!-- guide css -->
+    <link type="text/css" rel="stylesheet" href="../../../gate/gt_asset/css/SyntaxHighlighter/shCore.css" />
+    <link type="text/css" rel="stylesheet" href="../../../gate/gt_asset/css/SyntaxHighlighter/shCoreDefault.css" />
+    <link type="text/css" rel="stylesheet" href="../../../gate/gt_asset/css/SyntaxHighlighter/shThemeDefault.css" />
+    <!-- // guide css -->
+
+    <!-- guide JS -->
+    <script type="text/javascript" src="../../../gate/gt_asset/js/SyntaxHighlighter/shCore.js"></script>
+    <script type="text/javascript" src="../../../gate/gt_asset/js/SyntaxHighlighter/shBrushXml.js"></script>
+    <script type="text/javascript" src="../../../gate/gt_asset/js/SyntaxHighlighter/shBrushCss.js"></script>
+    <script type="text/javascript" src="../../../gate/gt_asset/js/SyntaxHighlighter/shBrushJScript.js"></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.all();
+    </script>
+    <!-- // guide JS -->
+
+    <title>table</title>
+  </head>
+
+  <body>
+    <div class="commonWrap">
+      <h1 class="commonWrap__title">테이블 가이드</h1>
+
+      <!-- Button -->
+      <div class="sample-section">
+        <h1 class="h1-title">list</h1>
+
+        <div class="sample-section__list">
+          <h2 class="h2-title">
+            클래스명 : <code class="use-tag__code use-tag__code--class">.bl_table</code>
+            <code class="use-tag__code use-tag__code--class">.bl_table--scrollX</code>
+            <code class="use-tag__code use-tag__code--class">.bl_table--scrollY</code>
+            <code class="use-tag__code use-tag__code--class">.bl_table--thSticky</code>
+          </h2>
+          <p class="use-tag">
+            옵션 정렬 :
+            <code class="use-tag__code">.bl_table__alignLeft</code>
+            <code class="use-tag__code">.bl_table__alignRight</code>
+          </p>
+          <!-- Guide Code -->
+          <div class="sample-group">
+            <!-- View Tag -->
+            <div class="sample-tag">
+              <p>Use</p>
+              <div class="sample-tag__tag-list">
+                <!-- View Tag 입력(HTML) -->
+                <p>기본 테이블</p>
+                <div class="bl_table">
+                  <table>
+                    <colgroup>
+                      <col width="28%" />
+                      <col width="24%" />
+                      <col width="24%" />
+                      <col width="24%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th class="bl_table__alignLeft" scope="col">감축률</th>
+                        <th class="bl_table__alignRight" scope="col">전기</th>
+                        <th scope="col">상수도</th>
+                        <th scope="col">도시가스</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      @@for(var i=0; i<10; i++) {
+                      <tr>
+                        <td class="bl_table__alignLeft">5% 이상 ~ 10% 미만</td>
+                        <td class="bl_table__alignRight">5,000 P</td>
+                        <td>750 P</td>
+                        <td>3,000P</td>
+                      </tr>
+                      }
+                    </tbody>
+                  </table>
+                </div>
+                <br />
+                <br />
+                <p>가로 스크롤 적용</p>
+                <div class="bl_table bl_table--scrollX">
+                  <table>
+                    <colgroup>
+                      <col width="28%" />
+                      <col width="24%" />
+                      <col width="24%" />
+                      <col width="24%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">감축률</th>
+                        <th scope="col">전기</th>
+                        <th scope="col">상수도</th>
+                        <th scope="col">도시가스</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      @@for(var i=0; i<10; i++) {
+                      <tr>
+                        <td>5% 이상 ~ 10% 미만</td>
+                        <td>5,000 P</td>
+                        <td>750 P</td>
+                        <td>3,000P</td>
+                      </tr>
+                      }
+                    </tbody>
+                  </table>
+                </div>
+                <br />
+                <br />
+                <p>세로 스크롤 적용</p>
+                <div class="bl_table bl_table--scrollY">
+                  <table>
+                    <colgroup>
+                      <col width="28%" />
+                      <col width="24%" />
+                      <col width="24%" />
+                      <col width="24%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">감축률</th>
+                        <th scope="col">전기</th>
+                        <th scope="col">상수도</th>
+                        <th scope="col">도시가스</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      @@for(var i=0; i<10; i++) {
+                      <tr>
+                        <td>5% 이상 ~ 10% 미만</td>
+                        <td>5,000 P</td>
+                        <td>750 P</td>
+                        <td>3,000P</td>
+                      </tr>
+                      }
+                    </tbody>
+                  </table>
+                </div>
+                <br />
+                <br />
+                <p>가로세로 스크롤 적용</p>
+                <div class="bl_table bl_table--scrollX bl_table--scrollY">
+                  <table>
+                    <colgroup>
+                      <col width="28%" />
+                      <col width="24%" />
+                      <col width="24%" />
+                      <col width="24%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">감축률</th>
+                        <th scope="col">전기</th>
+                        <th scope="col">상수도</th>
+                        <th scope="col">도시가스</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      @@for(var i=0; i<10; i++) {
+                      <tr>
+                        <td>5% 이상 ~ 10% 미만</td>
+                        <td>5,000 P</td>
+                        <td>750 P</td>
+                        <td>3,000P</td>
+                      </tr>
+                      }
+                    </tbody>
+                  </table>
+                </div>
+                <br />
+                <br />
+                <p>세로 스크롤 / thead sticky 적용</p>
+                <div class="bl_table bl_table--scrollY bl_table--thSticky">
+                  <table>
+                    <colgroup>
+                      <col width="28%" />
+                      <col width="24%" />
+                      <col width="24%" />
+                      <col width="24%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">감축률</th>
+                        <th scope="col">전기</th>
+                        <th scope="col">상수도</th>
+                        <th scope="col">도시가스</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      @@for(var i=0; i<10; i++) {
+                      <tr>
+                        <td>5% 이상 ~ 10% 미만</td>
+                        <td>5,000 P</td>
+                        <td>750 P</td>
+                        <td>3,000P</td>
+                      </tr>
+                      }
+                    </tbody>
+                  </table>
+                </div>
+                <!-- // View Tag 입력(HTML) -->
+              </div>
+            </div>
+            <!-- // View Tag -->
+
+            <!-- 사용코드 -->
+            <div class="sample-code">
+              <p>Tag</p>
+              <pre class="brush: html;">
+                <!-- 사용코드 입력(HTML) -->
+                <p>기본 테이블</p>
+                <div class="bl_table">
+                  <table>
+                    <colgroup>
+                      <col width="28%" />
+                      <col width="24%" />
+                      <col width="24%" />
+                      <col width="24%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th class="bl_table__alignLeft" scope="col">감축률</th>
+                        <th class="bl_table__alignRight" scope="col">전기</th>
+                        <th scope="col">상수도</th>
+                        <th scope="col">도시가스</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      @@for(var i=0; i<10; i++) {
+                      <tr>
+                        <td class="bl_table__alignLeft">5% 이상 ~ 10% 미만</td>
+                        <td class="bl_table__alignRight">5,000 P</td>
+                        <td>750 P</td>
+                        <td>3,000P</td>
+                      </tr>
+                      }
+                    </tbody>
+                  </table>
+                </div>
+                <br />
+                <br />
+                <p>가로 스크롤 적용</p>
+                <div class="bl_table bl_table--scrollX">
+                  <table>
+                    <colgroup>
+                      <col width="28%" />
+                      <col width="24%" />
+                      <col width="24%" />
+                      <col width="24%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">감축률</th>
+                        <th scope="col">전기</th>
+                        <th scope="col">상수도</th>
+                        <th scope="col">도시가스</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      @@for(var i=0; i<10; i++) {
+                      <tr>
+                        <td>5% 이상 ~ 10% 미만</td>
+                        <td>5,000 P</td>
+                        <td>750 P</td>
+                        <td>3,000P</td>
+                      </tr>
+                      }
+                    </tbody>
+                  </table>
+                </div>
+                <br />
+                <br />
+                <p>세로 스크롤 적용</p>
+                <div class="bl_table bl_table--scrollY">
+                  <table>
+                    <colgroup>
+                      <col width="28%" />
+                      <col width="24%" />
+                      <col width="24%" />
+                      <col width="24%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">감축률</th>
+                        <th scope="col">전기</th>
+                        <th scope="col">상수도</th>
+                        <th scope="col">도시가스</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      @@for(var i=0; i<10; i++) {
+                      <tr>
+                        <td>5% 이상 ~ 10% 미만</td>
+                        <td>5,000 P</td>
+                        <td>750 P</td>
+                        <td>3,000P</td>
+                      </tr>
+                      }
+                    </tbody>
+                  </table>
+                </div>
+                <br />
+                <br />
+                <p>가로세로 스크롤 적용</p>
+                <div class="bl_table bl_table--scrollX bl_table--scrollY ">
+                  <table>
+                    <colgroup>
+                      <col width="28%" />
+                      <col width="24%" />
+                      <col width="24%" />
+                      <col width="24%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">감축률</th>
+                        <th scope="col">전기</th>
+                        <th scope="col">상수도</th>
+                        <th scope="col">도시가스</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      @@for(var i=0; i<10; i++) {
+                      <tr>
+                        <td>5% 이상 ~ 10% 미만</td>
+                        <td>5,000 P</td>
+                        <td>750 P</td>
+                        <td>3,000P</td>
+                      </tr>
+                      }
+                    </tbody>
+                  </table>
+                </div>
+                scrollX scrollY는 동시 사용 가능 
+                <br />
+                <br />
+                <p>세로 스크롤 / thead sticky 적용</p>
+                <div class="bl_table bl_table--scrollY bl_table--thSticky">
+                  <table>
+                    <colgroup>
+                      <col width="28%" />
+                      <col width="24%" />
+                      <col width="24%" />
+                      <col width="24%" />
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th scope="col">감축률</th>
+                        <th scope="col">전기</th>
+                        <th scope="col">상수도</th>
+                        <th scope="col">도시가스</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      @@for(var i=0; i<10; i++) {
+                      <tr>
+                        <td>5% 이상 ~ 10% 미만</td>
+                        <td>5,000 P</td>
+                        <td>750 P</td>
+                        <td>3,000P</td>
+                      </tr>
+                      }
+                    </tbody>
+                  </table>
+                </div>
+                bl_table--thSticky 사용시 bl_table--scrollY 도 같이 사용되어야 함 (단독사용 불가능)
+
+                <!-- // 사용코드 입력(HTML) -->
+              </pre>
+            </div>
+            <!-- // 사용코드 -->
+          </div>
+          <!-- // Guide Code -->
+        </div>
+      </div>
+      <!-- // Button -->
+    </div>
+    <script src="../../asset/js/common.js"></script>
+    <!-- <script>
+      document.addEventListener('click', (event) => {
+        if (event.target.classList[0] === 'el_btn') {
+          window.navigator.clipboard.writeText(event.target.classList.value).then(() => {
+            alert(`버튼 클래스 복사 완료~!!! \n ${event.target.classList.value}`);
+          });
+        }
+      });
+    </script> -->
+  </body>
+</html>

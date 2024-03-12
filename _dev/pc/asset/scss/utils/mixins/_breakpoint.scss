@@ -1,0 +1,14 @@
+@use '../../config';
+
+@mixin breakPoint($breakpointMin, $breakpomtMax) {
+  @media screen and (min-width: $breakpointMin) and (max-width: $breakpomtMax) {
+    @content;
+  }
+}
+
+// Breakpoint
+// pc
+// @include breakpoint.breakPoint(config.$bp-desktop, config.$bp-deskWide) {}
+
+// mobile
+// @include breakpoint.breakPoint(config.$bp-mobile, config.$bp-tablet) {}

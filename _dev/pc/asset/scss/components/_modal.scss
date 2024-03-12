@@ -1,0 +1,209 @@
+@use "../utils/mixins/bem";
+@use "../config";
+@use "../utils/mixins/breakpoint";
+@use "../utils/mixins/size";
+@use "../utils/mixins/path";
+@use "../utils/fnc/function";
+
+// 현재는 미사용. 기능 개발 후에는 .scss 파일로 사용하게 처리
+//@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    max-height: 100%;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.bl_modal {
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &[aria-hidden="true"] {
+    display: none;
+  }
+
+  &[aria-hidden="false"] {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    inset: 0;
+    z-index: 1000;
+    @include size.size(100%);
+  }
+
+  &__inner {
+    background-color: var(--color-gc10);
+    padding: 2rem;
+
+    width: 80%;
+    max: {
+      width: 500px;
+      height: 400px;
+    }
+
+    border: {
+      radius: 20px;
+    }
+
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+    row-gap: 32px;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    &--center {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &_header {
+    flex: 0 1 auto;
+    min-height: 24px;
+
+    &:empty {
+      display: none;
+    }
+  }
+
+  &_body {
+    flex: 1 1 auto;
+    // max-height: 400px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  &_footer {
+    flex: 0 1 auto;
+
+    &:empty {
+      display: none;
+    }
+
+    .bl_btn_wrap.bl_btn_wrap--flex {
+      align-items: center;
+    }
+  }
+
+  &_btnClose {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    @include size.size(24px);
+    background: url(path.$COMMON_BG_URL + "btn_cancel_black.svg") no-repeat center / cover;
+  }
+
+  /* 타입구분 */
+
+  &--full {
+    .bl_modal {
+      &__inner {
+        @include size.size(100%);
+        border-radius: 0;
+        max: {
+          width: none;
+          height: none;
+        }
+      }
+
+      &_body {
+        max-height: 100%;
+      }
+    }
+  }
+
+  &--bottomSheet {
+    flex-direction: column-reverse;
+    align-items: stretch;
+
+    .bl_modal {
+      &__inner {
+        position: relative;
+        left: auto;
+        top: auto;
+        width: auto;
+        height: auto;
+        max: {
+          width: none;
+          height: 50vmax;
+        }
+      }
+      &_body {
+        max-height: none;
+      }
+    }
+  }
+}
+
+.bl_toast {
+  &[aria-hidden="false"]:empty,
+  &[aria-hidden="true"] {
+    display: none;
+  }
+
+  &[aria-hidden="false"] {
+    display: flex;
+    gap: 20px;
+    position: fixed;
+    z-index: 1000;
+    padding: {
+      top: calc(env(safe-area-inset-top) + 2rem);
+      right: calc(env(safe-area-inset-right) + 2rem);
+      bottom: calc(env(safe-area-inset-bottom) + 2rem);
+      left: calc(env(safe-area-inset-left) + 2rem);
+    }
+    @include size.size(100%, auto);
+  }
+
+  &--top {
+    left: 0;
+    top: 0;
+    flex-direction: column;
+  }
+  &--bottom {
+    left: 0;
+    bottom: 0;
+    flex-direction: column-reverse;
+  }
+
+  &__body {
+    font-size: 1.4rem;
+    background-color: var(--color-gc10);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0px 0px 5px var(--color-gc100);
+    animation-duration: 0.5s;
+    width: min(100%, 500px);
+    margin: {
+      left: auto;
+      right: auto;
+    }
+
+    &--left {
+      text-align: left;
+    }
+    &--right {
+      text-align: right;
+    }
+    &--center {
+      text-align: center;
+    }
+  }
+
+  .bl_modal__inner {
+    position: static;
+    min: {
+      width: 0;
+      height: 0;
+    }
+    box-shadow: 0px 0px 5px var(--color-gc100);
+  }
+}

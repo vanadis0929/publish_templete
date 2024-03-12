@@ -1,0 +1,12 @@
+@mixin placeholder($color: #666) {
+  &::-webkit-input-placeholder {
+    // Chrome/Opera/Safari
+    color: $color;
+    opacity: 1;
+  }
+  &::-moz-placeholder {
+    // Firefox 19+
+    color: $color;
+    opacity: 1;
+  }
+}

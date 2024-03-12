@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+// 기본 스펙정의
+@use "./_config";
+
+@use "./base/_base";
+
+@use "./fonts/fonts";
+
+// Layout SCSS
+@use "./layouts/layout";
+@use "./layouts/header";
+@use "./layouts/footer";
+@use "./layouts/ui_common";
+
+// Helpers
+@use "./helpers/blind";
+
+// globalSkin
+@use "./utils/skins/globalSkin";
+
+// Page SCSS
+@use "./page/main";
+
+// Button
+@use "./components/button";
+
+// list
+@use "./components/list";
+
+// icons
+@use "./components/icons";
+
+// TypeFace
+@use "./components/typeface";
+
+// Form
+@use "./components/input";
+
+// Form
+@use "./components/modal";
+
+// Table
+@use "./components/table";
+
+// textIndent
+@use "./components/textindent";
+
+// pagination
+@use "./components/_pagination";
+
+// tab
+@use "./components/tab";
+
+// accordion
+@use "./components/accordion";
+
+@include button.btns();
+
+@include icons.arrow();
+
+@include blind.blind();
+
+@include typeface.mainSectionTitle();
+
+@include globalSkin.globalSkin();
+
+@import "./vendors/swiper-bundle-11.0.5.min.scss";

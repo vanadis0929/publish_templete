@@ -1,0 +1,72 @@
+@use "../utils/mixins/bem";
+@use "../config";
+@use "../utils/mixins/breakpoint";
+@use "../utils/mixins/size";
+@use "../utils/mixins/path";
+@use "../utils/fnc/function";
+@use "../utils/mixins/ellipsis";
+@use "../utils/mixins/scrollBarStyle";
+
+// table
+.bl_table {
+  th,
+  td {
+    padding: 10px 5px;
+    text-align: center;
+    font-size: 1.4rem;
+    vertical-align: middle;
+
+    &.bl_table {
+      &__alignLeft {
+        text-align: left;
+      }
+      &__alignRight {
+        text-align: right;
+      }
+    }
+  }
+
+  thead {
+    th {
+      background-color: var(--color-gc50);
+    }
+  }
+
+  tbody {
+    td {
+      border-top: 1px solid var(--color-gc30);
+    }
+    tr:first-child td {
+      border-top: none;
+    }
+  }
+
+  &--scrollX {
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+
+    table {
+      min-width: 130vw;
+    }
+  }
+
+  &--scrollY {
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    max-height: 200px;
+  }
+
+  &--thSticky {
+    thead {
+      position: sticky;
+      inset: 0;
+    }
+  }
+}
+
+// Breakpoint
+// pc
+// @include breakpoint.breakPoint(config.$bp-desktop, config.$bp-deskWide) {}
+
+// mobile
+// @include breakpoint.breakPoint(config.$bp-mobile, config.$bp-tablet) {}

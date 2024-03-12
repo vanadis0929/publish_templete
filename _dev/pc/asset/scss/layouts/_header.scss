@@ -1,0 +1,17 @@
+@use '../config';
+@use '../utils/mixins/ellipsis';
+@use '../utils/mixins/breakpoint';
+@use '../utils/mixins/size';
+@use '../utils/fnc/function';
+@use '../utils/mixins/path';
+@use '../utils/mixins/scrollBarStyle';
+
+.bl_header {
+}
+
+// Breakpoint
+// pc
+// @include breakpoint.breakPoint(config.$bp-desktop, config.$bp-deskWide) {}
+
+// mobile
+// @include breakpoint.breakPoint(config.$bp-mobile, config.$bp-tablet) {}

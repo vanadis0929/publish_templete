@@ -1,0 +1,76 @@
+//////////////////////////////
+// project config
+//////////////////////////////
+@use "./utils/mixins/path";
+
+:root {
+  // primary Color(숫자가 높을 수록 찐함)
+  --color-primary10: #a2d2c1;
+  --color-primary20: #5dc7a2;
+  --color-primary30: #ea6560;
+
+  // Grayscale Color(숫자가 높을 수록 찐함)
+  --color-gc10: #ffffff;
+  --color-gc20: #f5f5f5;
+  --color-gc30: #eeeeee;
+  --color-gc40: #e0e0e0;
+  --color-gc50: #bdbdbd;
+  --color-gc60: #9e9e9e;
+  --color-gc70: #757575;
+  --color-gc80: #616161;
+  --color-gc90: #424242;
+  --color-gc100: #000000;
+}
+
+// layout
+$max-layout-width: 1920px;
+
+// Base font
+$base-font-reset: 10px;
+$base-font-size: 1.4rem;
+$base-line-height: 1.2;
+$base-font-weight: 400;
+$base-font-family:
+  "맑은 고딕",
+  Malgun Gothic,
+  "돋움",
+  Dotum,
+  applegothic,
+  Tahoma,
+  Arial,
+  sans-serif;
+$letter-spacing: 0;
+$body-font-color: var(--color-gc100);
+
+// Title Pc Font Size
+$titPc40: 40;
+
+// Title Mobile Font Size
+$titMo10: 10;
+
+// Body Pc Font Size
+$bodyTxtPc36: 36;
+
+// Body Mobile Font Size
+$bodyTxtMo8: 8;
+
+$color-primary10: var(--color-primary10);
+$color-primary20: var(--color-primary20);
+$color-primary30: var(--color-primary30);
+
+$color-gc10: var(--color-gc10);
+$color-gc20: var(--color-gc20);
+$color-gc30: var(--color-gc30);
+$color-gc40: var(--color-gc40);
+$color-gc50: var(--color-gc50);
+$color-gc60: var(--color-gc60);
+$color-gc70: var(--color-gc70);
+$color-gc80: var(--color-gc80);
+$color-gc90: var(--color-gc90);
+$color-gc100: var(--color-gc100);
+
+// breakpoints
+$bp-mobile: 360px;
+$bp-tablet: 1023px;
+$bp-desktop: 1024px;
+$bp-deskWide: 1440px;

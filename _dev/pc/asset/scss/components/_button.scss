@@ -1,0 +1,98 @@
+@use "../utils/mixins/bem";
+@use "../config";
+@use "../utils/mixins/breakpoint";
+@use "../utils/mixins/size";
+@use "../utils/mixins/path";
+@use "../utils/fnc/function";
+@use "../utils/mixins/atag";
+
+//버튼 사이즈에 대한 height (프로젝트에 따라 다를 수 있음)
+$xsHeight: 30px;
+$smHeight: 40px;
+$meHeight: 44px;
+$laHeight: 50px;
+$xlaHeight: 56px;
+
+// 버튼 공통
+@mixin btns() {
+  //btn-default
+
+  @include bem.block("el_btn") {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 14px;
+    line-height: 1.4;
+
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+
+    user-select: none;
+    padding-block: 10px;
+
+    color: var(--color-gc100);
+
+    border: 1px solid var(--color-gc100);
+
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+
+    @include atag.atag();
+
+    // xs
+    &--xs {
+      font-size: 1.2rem;
+      height: $xsHeight;
+      border-radius: 6px;
+      padding-inline: 20px;
+      @include atag.atag(var(--color-gc20), var(--color-primary30), var(--color-gc40));
+    }
+
+    // sm
+    &--sm {
+      font-size: 1.3rem;
+      height: $smHeight;
+      border-radius: 6px;
+      padding-inline: 20px;
+      @include atag.atag(var(--color-gc20), var(--color-primary30), var(--color-gc40));
+    }
+
+    // me
+    &--me {
+      height: $meHeight;
+      border-radius: 6px;
+      padding-inline: 20px;
+      @include atag.atag(var(--color-gc20), var(--color-primary30), var(--color-gc40));
+    }
+
+    // la
+    &--la {
+      height: $laHeight;
+      border-radius: 6px;
+      padding-inline: 20px;
+      @include atag.atag(var(--color-gc20), var(--color-primary30), var(--color-gc40));
+    }
+
+    // xla
+    &--xla {
+      height: $xlaHeight;
+      border-radius: 6px;
+      padding: 0 20px;
+      @include atag.atag(var(--color-gc20), var(--color-primary30), var(--color-gc40));
+    }
+  }
+
+  .bl_btn_wrap {
+    &--flex {
+      display: flex;
+      margin-top: 0;
+      gap: 8px;
+
+      .el_btn {
+        flex: 1 1 auto;
+      }
+    }
+  }
+}

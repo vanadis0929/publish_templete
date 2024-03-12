@@ -1,0 +1,28 @@
+@use "../../config";
+
+// a Tag 속성 변경 믹스인 link,:visited,:hover,:active 제어
+@mixin atag($color: var(--color-gc20), $hoverColor: var(--color-gc80), $bgColor: var(--color-gc60)) {
+  &:link {
+    text-decoration: none;
+    color: $color;
+  }
+
+  &:visited {
+    text-decoration: none;
+    color: $color;
+  }
+  //중복으로 선언시 hover가 더 우선으로 먹어서 동작안됨. active 선언 분리
+
+  // 폰 터치로는 hover 인식되지 않게 수정 (터치펜이나 마우스일때만)
+  @media (hover: hover) {
+    &:hover {
+      color: var(--color-gc100);
+      background-color: $bgColor;
+    }
+  }
+
+  &:active {
+    text-decoration: none;
+    color: $color;
+  }
+}

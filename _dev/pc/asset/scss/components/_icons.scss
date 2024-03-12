@@ -1,0 +1,17 @@
+@use '../config';
+@use '../utils/mixins/path';
+@use '../utils/mixins/breakpoint';
+@use '../utils/fnc/function';
+@use '../utils/mixins/size';
+
+@mixin arrow() {
+  .el_iconArrow {
+  }
+}
+
+// Breakpoint
+// pc
+// @include breakpoint.breakPoint(config.$bp-desktop, config.$bp-deskWide) {}
+
+// mobile
+// @include breakpoint.breakPoint(config.$bp-mobile, config.$bp-tablet) {}

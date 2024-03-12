@@ -1,0 +1,118 @@
+@use "../../config";
+@use "../../utils/mixins/breakpoint";
+@use "../../utils/mixins/size";
+@use "../../utils/mixins/path";
+@use "../../utils/fnc/function";
+
+// 변수 설정 config색상 참고
+$bgColorSet: (
+  bgGry10: var(--color-gc10),
+  bgGry20: var(--color-gc20),
+  bgGry30: var(--color-gc30),
+  bgGry40: var(--color-gc40),
+  bgGry50: var(--color-gc50),
+  bgGry60: var(--color-gc60),
+  bgGry70: var(--color-gc70),
+  bgGry80: var(--color-gc80),
+  bgGry90: var(--color-gc90),
+  bgGry100: var(--color-gc100),
+);
+
+$primaryColorSet: (
+  prCor10: var(--color-primary10),
+  prCor20: var(--color-primary20),
+  prCor30: var(--color-primary30),
+);
+
+$outLineColorSet: (
+  oulGry10: var(--color-gc10),
+  oulGry20: var(--color-gc20),
+  oulGry30: var(--color-gc30),
+  oulGry40: var(--color-gc40),
+  oulGry50: var(--color-gc50),
+  oulGry60: var(--color-gc60),
+  oulGry70: var(--color-gc70),
+  oulGry80: var(--color-gc80),
+  oulGry90: var(--color-gc90),
+  oulGry100: var(--color-gc100),
+);
+
+$primaryOutlineSet: (
+  bordPr10: var(--color-primary10),
+  bordPr20: var(--color-primary20),
+  bordPr30: var(--color-primary30),
+);
+
+$borderSet: (
+  bord10: var(--color-gc10),
+  bord20: var(--color-gc20),
+  bord30: var(--color-gc30),
+  bord40: var(--color-gc40),
+  bord50: var(--color-gc50),
+  bord60: var(--color-gc60),
+  bord70: var(--color-gc70),
+  bord80: var(--color-gc80),
+  bord90: var(--color-gc90),
+  bord100: var(--color-gc100),
+);
+
+$primaryBorderSet: (
+  oulPr10: var(--color-primary10),
+  oulPr20: var(--color-primary20),
+  oulPr30: var(--color-primary30),
+);
+
+@mixin globalSkin() {
+  // backgroundColor
+  @each $name, $value in $bgColorSet {
+    .el_#{$name} {
+      // @debug $value;
+      background-color: $value;
+    }
+  }
+
+  // primaryColor
+  @each $name, $value in $primaryColorSet {
+    .el_#{$name} {
+      // @debug $value;
+      background-color: $value;
+    }
+  }
+
+  // outLineColor
+  @each $name, $value in $outLineColorSet {
+    .el_#{$name} {
+      // @debug $value;
+      outline: 1px solid $value;
+    }
+  }
+
+  // outLineColor primaryColor
+  @each $name, $value in $primaryOutlineSet {
+    .el_#{$name} {
+      // @debug $value;
+      outline: 1px solid $value;
+    }
+  }
+
+  // border
+  @each $name, $value in $borderSet {
+    .el_#{$name} {
+      // @debug $value;
+      outline: 1px solid $value;
+    }
+  }
+
+  // border primaryColor
+  @each $name, $value in $primaryBorderSet {
+    .el_#{$name} {
+      // @debug $value;
+      outline: 1px solid $value;
+    }
+  }
+
+  // fontWeight
+  .el_fontBold {
+    font-weight: 800;
+  }
+}

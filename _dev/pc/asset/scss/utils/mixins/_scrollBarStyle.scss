@@ -1,0 +1,45 @@
+@use '../../config';
+
+@mixin scrollBarStyle_sr {
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  &::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: config.$color-gc50;
+    border: 0px none config.$color-gc10;
+    border-radius: 50px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: config.$color-gc50;
+  }
+
+  &::-webkit-scrollbar-thumb:active {
+    background: config.$color-gc50;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: config.$color-gc10;
+    border: 0px none config.$color-gc10;
+    border-radius: 0px;
+  }
+
+  &::-webkit-scrollbar-track:hover {
+    background: config.$color-gc10;
+  }
+
+  &::-webkit-scrollbar-track:active {
+    background: config.$color-gc10;
+  }
+
+  &::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}

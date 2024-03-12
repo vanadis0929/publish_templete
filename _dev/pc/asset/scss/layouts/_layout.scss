@@ -1,0 +1,27 @@
+@use '../config';
+@use '../utils/mixins/ellipsis';
+@use '../utils/mixins/breakpoint';
+@use '../utils/fnc/function';
+@use '../utils/mixins/size';
+
+.ly_wrap {
+}
+
+.ly_header {
+}
+
+.ly_header__inner {
+}
+
+// ly_subContents
+.ly_subContents {
+}
+.ly_subContents__inner {
+}
+
+// Breakpoint
+// pc
+// @include breakpoint.breakPoint(config.$bp-desktop, config.$bp-deskWide) {}
+
+// mobile
+// @include breakpoint.breakPoint(config.$bp-mobile, config.$bp-tablet) {}

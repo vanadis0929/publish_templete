@@ -1,0 +1,42 @@
+{
+  "paths": {
+    "pc": {
+      "css": {
+        "markupSrc": "./_dev/gate/gt_asset/scss/",
+        "markupOutput": "./_dev/gate/gt_asset/css/",
+        "markupDest": "./deploy/gate/gt_asset/css/",
+        "src": "./_dev/pc/asset/scss/",
+        "output": "./_dev/pc/asset/css/",
+        "dest": "./deploy/pc/asset/css/"
+      },
+      "html": {
+        "markupInclude": "./deploy/gate/@gate_include/",
+        "markupSrc": "./_dev/gate/gate_dveHtml/",
+        "markupOutput": "./_dev/gate/gate_viewHtml/",
+        "markupDest": "./deploy/gate/gate_viewHtml/",
+        "include": "./_dev/pc/@include_pc/",
+        "src": "./_dev/pc/dev_html/",
+        "output": "./_dev/pc/html/",
+        "dest": "./deploy/pc/html/"
+      },
+      "js": {
+        "markupSrc": "./_dev/gate/gt_asset/js/",
+        "markupOutput": "./_dev/gate/gt_asset/js/",
+        "markupDest": "./deploy/gate/gt_asset/js/",
+        "src": "./_dev/pc/asset/js/",
+        "dest": "./deploy/pc/asset/js/"
+      },
+      "images": {
+        "markupSrc": "./_dev/gate/gt_asset/img/",
+        "markupOutput": "./_dev/gate/gt_asset/img/",
+        "markupDest": "./deploy/gate/gt_asset/img/",
+        "src": "./_dev/pc/asset/img/",
+        "dest": "./deploy/pc/asset/img/"
+      },
+      "font": {
+        "src": "./_dev/pc/asset/font/",
+        "dest": "./deploy/pc/asset/font/"
+      }
+    }
+  }
+}

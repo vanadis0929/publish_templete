@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 구축 asset -->
+    <link rel="stylesheet" href="../../asset/css/common.css" />
+    <link rel="stylesheet" href="../../asset/css/vendors/swiper-bundle-11.0.5.min.css" />
+
+    <script src="../../asset/js/plugins/jquery-3.7.0/jquery-3.7.0.min.js"></script>
+    <script src="../../asset/js/plugins/swiper-bundle-11.0.5/swiper-bundle.min.js"></script>
+
+    <!-- // 구축 asset -->
+
+    <!-- guide css -->
+    <link type="text/css" rel="stylesheet" href="../../../gate/gt_asset/css/SyntaxHighlighter/shCore.css" />
+    <link type="text/css" rel="stylesheet" href="../../../gate/gt_asset/css/SyntaxHighlighter/shCoreDefault.css" />
+    <link type="text/css" rel="stylesheet" href="../../../gate/gt_asset/css/SyntaxHighlighter/shThemeDefault.css" />
+    <!-- // guide css -->
+
+    <!-- guide JS -->
+    <script type="text/javascript" src="../../../gate/gt_asset/js/SyntaxHighlighter/shCore.js"></script>
+    <script type="text/javascript" src="../../../gate/gt_asset/js/SyntaxHighlighter/shBrushXml.js"></script>
+    <script type="text/javascript" src="../../../gate/gt_asset/js/SyntaxHighlighter/shBrushCss.js"></script>
+    <script type="text/javascript" src="../../../gate/gt_asset/js/SyntaxHighlighter/shBrushJScript.js"></script>
+    <script type="text/javascript">
+      SyntaxHighlighter.all();
+    </script>
+    <!-- // guide JS -->
+
+    <title>tab menu</title>
+  </head>
+
+  <body>
+    <div class="commonWrap">
+      <h1 class="commonWrap__title">탭메뉴 가이드</h1>
+
+      <!-- Button -->
+      <div class="sample-section">
+        <h1 class="h1-title">tab</h1>
+
+        <div class="sample-section__list">
+          <h2 class="h2-title">
+            클래스명 : <code class="use-tag__code use-tag__code--class">.bl_tabs</code>
+            <code class="use-tag__code use-tag__code--class">.bl_tabs__inner</code>
+            <code class="use-tag__code use-tag__code--class">.bl_tabsContents</code>
+          </h2>
+
+          <!-- Guide Code -->
+          <div class="sample-group">
+            <!-- View Tag -->
+            <div class="sample-tag">
+              <p>Use</p>
+              <div class="sample-tag__tag-list">
+                <!-- View Tag 입력(HTML) -->
+                <div class="bl_tabs" role="tablist" aria-labelledby="bl_tabs_title">
+                  <h3 id="bl_tabs_title" class="bl_tabs__title">탭 제목</h3>
+                  <div class="bl_tabs__inner">
+                    <button id="tab-1" class="el_btn el_btn_me el_prCor10" type="button" role="tab" aria-selected="true" aria-controls="tabpanel-1">탭 버튼 1</button>
+                    <button id="tab-2" class="el_btn el_btn_me el_bgGry50" type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="tabpanel-2">탭 버튼 2</button>
+                    <button id="tab-3" class="el_btn el_btn_me el_bgGry50" type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="tabpanel-3">탭 버튼 3</button>
+                  </div>
+                </div>
+                <div class="bl_tabsContents">
+                  <div id="tabpanel-1" tabindex="0" role="tabpanel" class="is_active" aria-labelledby="tab-1">탭 1의 내용 내용</div>
+                  <div id="tabpanel-2" tabindex="0" role="tabpanel" aria-labelledby="tab-2">탭 2의 내용 내용</div>
+                  <div id="tabpanel-3" tabindex="0" role="tabpanel" aria-labelledby="tab-3">탭 3의 내용 내용</div>
+                </div>
+
+                <div class="bl_tabs" role="tablist" aria-labelledby="bl_tabs_title-1">
+                  <h3 id="bl_tabs_title-1" class="bl_tabs__title">탭 제목</h3>
+                  <div class="bl_tabs__inner">
+                    <button id="tab-1-1" class="el_btn el_btn_me el_prCor10" type="button" role="tab" aria-selected="true" aria-controls="tabpanel-1-1">탭 버튼 1-1</button>
+                    <button id="tab-2-1" class="el_btn el_btn_me el_bgGry50" type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="tabpanel-2-1">탭 버튼 2-1</button>
+                    <button id="tab-3-1" class="el_btn el_btn_me el_bgGry50" type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="tabpanel-3-1">탭 버튼 3-1</button>
+                  </div>
+                </div>
+                <div class="bl_tabsContents">
+                  <div id="tabpanel-1-1" tabindex="0" role="tabpanel" class="is_active" aria-labelledby="tab-1-1">탭 1의 내용 내용</div>
+                  <div id="tabpanel-2-1" tabindex="0" role="tabpanel" aria-labelledby="tab-2-1">탭 2의 내용 내용</div>
+                  <div id="tabpanel-3-1" tabindex="0" role="tabpanel" aria-labelledby="tab-3-1">탭 3의 내용 내용</div>
+                </div>
+                <!-- // View Tag 입력(HTML) -->
+              </div>
+            </div>
+            <!-- // View Tag -->
+
+            <!-- 사용코드 -->
+            <div class="sample-code">
+              <p>Tag</p>
+              <pre class="brush: html;">
+                <!-- 사용코드 입력(HTML) -->
+                <div class="bl_tabs" role="tablist" aria-labelledby="bl_tabs_title">
+                  <h3 id="bl_tabs_title" class="bl_tabs__title">탭 제목</h3>
+                  <div class="bl_tabs__inner">
+                    <button id="tab-1" class="el_btn el_btn_me el_prCor10" type="button" role="tab" aria-selected="true" aria-controls="tabpanel-1">탭 버튼 1</button>
+                    <button id="tab-2" class="el_btn el_btn_me el_bgGry50" type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="tabpanel-2">탭 버튼 2</button>
+                    <button id="tab-3" class="el_btn el_btn_me el_bgGry50" type="button" role="tab" aria-selected="false" tabindex="-1" aria-controls="tabpanel-3">탭 버튼 3</button>
+                  </div>
+                </div>
+                <div class="bl_tabs__contents">
+                  <div id="tabpanel-1" tabindex="0" role="tabpanel" class="is_active" aria-labelledby="tab-1">탭 1의 내용 내용</div>
+                  <div id="tabpanel-2" tabindex="0" role="tabpanel"  aria-labelledby="tab-2">탭 2의 내용 내용</div>
+                  <div id="tabpanel-3" tabindex="0" role="tabpanel"  aria-labelledby="tab-3">탭 3의 내용 내용</div>
+                </div>
+                탭간 이동은 화살표키로 가능, 활성화 된 탭버튼에서 tab포커스 이동시 1의 내용 div로 포커스 이동
+                <!-- // 사용코드 입력(HTML) -->
+              </pre>
+            </div>
+            <!-- // 사용코드 -->
+          </div>
+          <!-- // Guide Code -->
+        </div>
+      </div>
+      <!-- // Button -->
+    </div>
+    <script src="../../asset/js/common.js"></script>
+    <!-- <script>
+      document.addEventListener('click', (event) => {
+        if (event.target.classList[0] === 'el_btn') {
+          window.navigator.clipboard.writeText(event.target.classList.value).then(() => {
+            alert(`버튼 클래스 복사 완료~!!! \n ${event.target.classList.value}`);
+          });
+        }
+      });
+    </script> -->
+  </body>
+</html>
