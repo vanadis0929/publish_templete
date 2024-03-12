@@ -1,6 +1,6 @@
 # 퍼블리싱 템플릿 
 
-# 해당 템플릿을 활용하여 대표적으로 작업 했던 사이트
+## 해당 템플릿을 활용하여 대표적으로 작업 했던 사이트
 - [삼성반도체](https://semiconductor.samsung.com/)
   - 다국어 사이트, 반응형  
 - [그린카드](https://green-card.co.kr/app/mainPage.do)
@@ -10,15 +10,15 @@
 
 ## 사용 기술
 
-## gulp
+### gulp
 
 - production 배포 및 퍼블 가이드 작성에 사용
 
-## html
+### html
 
 - 자주 사용하는 기본 템플릿 작성 (아코디안, 버튼, 폼요소, 리스트, 모달/토스트, 탭, 테이블
 
-## scss / css
+### scss / css
 
 - bem 방식을 사용하여 작성
 - scss 변수와 / css variable 활용 및 용도 분리
