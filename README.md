@@ -1,5 +1,10 @@
 # 퍼블리싱 템플릿 
 
+# 해당 템플릿을 활용하여 대표적으로 작업 했던 사이트
+- [삼성반도체](https://semiconductor.samsung.com/)
+- [그린카드](https://green-card.co.kr/app/mainPage.do)
+- [몽고식품](https://www.monggofood.com/)
+
 ## 사용 기술
 
 ## gulp
