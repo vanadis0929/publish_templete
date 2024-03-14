@@ -1,6 +1,6 @@
 # 퍼블리싱 템플릿
 
-- [빌드 된 페이지 보기](https://vanadis0929.github.io/publish_templete/deploy/gate/gate_viewHtml/index_pc.html)
+- [빌드 된 페이지 보기](https://vanadis0929.github.io/publish_templete/build/deploy/gate/gate_viewHtml/index_pc.html)
 
 ## 해당 템플릿을 활용하여 대표적으로 작업 했던 사이트
 
