@@ -1,4 +1,5 @@
 {
+  "homepage": "https: //vanadis0929.github.io/publish_templete/",
   "name": "domain-name",
   "description": "domain-name",
   "version": "1.0.0",
@@ -10,7 +11,9 @@
   "scripts": {
     "gulp": "NODE_ENV='development' gulp",
     "gulp-build": "NODE_ENV='production' gulp",
-    "prettier-fix": "prettier --write ."
+    "prettier-fix": "prettier --write .",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "browser-sync": "^3.0.2",
@@ -23,6 +26,7 @@
     "babel-preset-es2015": "^6.24.1",
     "breakpoint-sass": "3.0.0",
     "css-mqpacker": "7.0.0",
+    "gh-pages": "^6.1.1",
     "gulp": "4.0.2",
     "gulp-autoprefixer": "8.0.0",
     "gulp-clean": "0.4.0",
