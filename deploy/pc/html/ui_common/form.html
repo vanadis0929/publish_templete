@@ -1,0 +1,944 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- 구축 asset -->
+	<link rel="stylesheet" href="../../asset/css/common.css" />
+	<link rel="stylesheet" href="../../asset/css/vendors/swiper-bundle-11.0.5.min.css" />
+	<link rel="stylesheet" href="../../asset/css/vendors/selectric-1.11.1.css" />
+
+	<script src="../../asset/js/plugins/jquery-3.7.0/jquery-3.7.0.min.js"></script>
+	<script src="../../asset/js/plugins/swiper-bundle-11.0.5/swiper-bundle.min.js"></script>
+	<script src="../../asset/js/plugins/jquery.selectric-1.13.1/jquery.selectric.min.js"></script>
+	<!-- <script src="../../asset/js/plugins/TweenMax-1.17.0/TweenMax.js"></script> -->
+
+	<!-- // 구축 asset -->
+
+	<!-- guide css -->
+	<link type="text/css" rel="stylesheet" href="../../../gate/gt_asset/css/SyntaxHighlighter/shCore.css" />
+	<link type="text/css" rel="stylesheet" href="../../../gate/gt_asset/css/SyntaxHighlighter/shCoreDefault.css" />
+	<link type="text/css" rel="stylesheet" href="../../../gate/gt_asset/css/SyntaxHighlighter/shThemeDefault.css" />
+	<!-- // guide css -->
+
+	<!-- guide JS -->
+	<script type="text/javascript" src="../../../gate/gt_asset/js/SyntaxHighlighter/shCore.js"></script>
+	<script type="text/javascript" src="../../../gate/gt_asset/js/SyntaxHighlighter/shBrushXml.js"></script>
+	<script type="text/javascript" src="../../../gate/gt_asset/js/SyntaxHighlighter/shBrushCss.js"></script>
+	<script type="text/javascript" src="../../../gate/gt_asset/js/SyntaxHighlighter/shBrushJScript.js"></script>
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+	<!-- // guide JS -->
+
+	<!-- common JS -->
+	<script src="../../asset/js/common.js" defer></script>
+	<!-- // common JS -->
+
+	<title>Form</title>
+</head>
+
+<body>
+	<div class="commonWrap">
+		<h1 class="commonWrap__title">Input Guide</h1>
+
+		<!-- checkbox / radio -->
+		<div class="sample-section">
+			<h1 class="h1-title">checkbox / radio</h1>
+
+			<div class="sample-section__list">
+				<h2 class="h2-title">
+					클래스명 :
+					<code class="use-tag__code use-tag__code--class">.bl_radioCheck</code>
+					<code class="use-tag__code use-tag__code--class">.bl_radioCheck--flex</code>
+				</h2>
+				<!-- <p class="use-tag">사용태그 : <code class="use-tag__code">&lt;Element&gt;</code><br /></p> -->
+				<p class="use-tag">
+					옵션(시리즈) :
+					<code class="use-tag__code">.bl_radioCheck_sr</code>, <code class="use-tag__code">.bl_radioCheck_sr2</code>, <code class="use-tag__code">.bl_radioCheck_sr3</code>, <code class="use-tag__code">.bl_radioCheck_sr4</code>,
+					<code class="use-tag__code">.bl_radioCheck_sr5</code>
+					<br />
+            .
+				</p>
+				<!-- 샘플 -->
+				<div class="sample-group">
+					<!-- 샘플태그 -->
+					<div class="sample-tag">
+						<p>Use</p>
+						<div class="sample-tag__tag-list">
+							<!-- 샘플태그 입력 -->
+							<div class="bl_radioCheck">
+								<div class="bl_radioCheck__inner bl_radioCheck_sr">
+									<input type="checkbox" class="el_input" disabled id="input_checkbox_disabled" />
+									<label for="input_checkbox_disabled">체크박스 disabled</label>
+								</div>
+								<div class="bl_radioCheck__inner bl_radioCheck_sr">
+									<input type="checkbox" class="el_input" checked id="input_checkbox_01" />
+									<label for="input_checkbox_01">체크박스 초기 checked</label>
+								</div>
+								<div class="bl_radioCheck__inner bl_radioCheck_sr2">
+									<input type="checkbox" class="el_input" class="" id="input_checkbox_02" />
+									<label for="input_checkbox_02">체크박스 ㅇㅅㅇ</label>
+								</div>
+								<div class="bl_radioCheck__inner bl_radioCheck_sr3">
+									<input type="checkbox" class="el_input" class="" id="input_checkbox_03" />
+									<label for="input_checkbox_03">체크박스 ㅇㅅㅇ</label>
+								</div>
+								<div class="bl_radioCheck__inner bl_radioCheck_sr4">
+									<input type="checkbox" class="el_input" class="" id="input_checkbox_04" />
+									<label for="input_checkbox_04">체크박스 ㅇㅅㅇ</label>
+								</div>
+								<div class="bl_radioCheck__inner bl_radioCheck_sr5">
+									<input type="checkbox" class="el_input" class="" id="input_checkbox_05" />
+									<label for="input_checkbox_05">체크박스 ㅇㅅㅇ</label>
+								</div>
+							</div>
+							<div class="bl_radioCheck bl_radioCheck--flex">
+								<div class="bl_radioCheck__inner bl_radioCheck_sr">
+									<input type="radio" class="el_input" name="radioTest1" disabled id="input_radio_disabled" />
+									<label for="input_radio_disabled">라디오 disabled</label>
+								</div>
+								<div class="bl_radioCheck__inner bl_radioCheck_sr">
+									<input type="radio" class="el_input" name="radioTest1" checked id="input_radio_06" />
+									<label for="input_radio_06">라디오 초기 checked</label>
+								</div>
+								<div class="bl_radioCheck__inner bl_radioCheck_sr2">
+									<input type="radio" class="el_input" name="radioTest1" id="input_radio_07" />
+									<label for="input_radio_07">라디오 ㅇㅅㅇ</label>
+								</div>
+								<div class="bl_radioCheck__inner bl_radioCheck_sr3">
+									<input type="radio" class="el_input" name="radioTest1" id="input_radio_08" />
+									<label for="input_radio_08">라디오 ㅇㅅㅇ</label>
+								</div>
+								<div class="bl_radioCheck__inner bl_radioCheck_sr4">
+									<input type="radio" class="el_input" name="radioTest1" id="input_radio_09" />
+									<label for="input_radio_09">라디오 ㅇㅅㅇ</label>
+								</div>
+								<div class="bl_radioCheck__inner bl_radioCheck_sr5">
+									<input type="radio" class="el_input" name="radioTest1" id="input_radio_10" />
+									<label for="input_radio_10">라디오 ㅇㅅㅇ</label>
+								</div>
+							</div>
+							<!-- //샘플태그 입력 -->
+						</div>
+					</div>
+					<!-- //샘플태그 -->
+
+					<!-- 샘플코드 -->
+					<div class="sample-code">
+						<p>Tag</p>
+						<pre class="brush: html;">
+              <!-- 샘플태그 입력 -->
+                <div class="bl_radioCheck">
+                  <div class="bl_radioCheck__inner bl_radioCheck_sr">
+                    <input type="checkbox" class="el_input" checked id="input_checkbox_01" />
+                    <label for="input_checkbox_01">체크박스 초기 checked</label>
+                  </div>
+                  <div class="bl_radioCheck__inner bl_radioCheck_sr2">
+                    <input type="checkbox" class="el_input" class="" id="input_checkbox_02" />
+                    <label for="input_checkbox_02">체크박스 ㅇㅅㅇ</label>
+                  </div>
+                  <div class="bl_radioCheck__inner bl_radioCheck_sr3">
+                    <input type="checkbox" class="el_input" class="" id="input_checkbox_03" />
+                    <label for="input_checkbox_03">체크박스 ㅇㅅㅇ</label>
+                  </div>
+                  <div class="bl_radioCheck__inner bl_radioCheck_sr4">
+                    <input type="checkbox" class="el_input" class="" id="input_checkbox_04" />
+                    <label for="input_checkbox_04">체크박스 ㅇㅅㅇ</label>
+                  </div>
+                  <div class="bl_radioCheck__inner bl_radioCheck_sr5">
+                    <input type="checkbox" class="el_input" class="" id="input_checkbox_05" />
+                    <label for="input_checkbox_05">체크박스 ㅇㅅㅇ</label>
+                  </div>
+                </div>
+                <div class="bl_radioCheck bl_radioCheck--flex">
+                  <div class="bl_radioCheck__inner bl_radioCheck_sr">
+                    <input type="radio" class="el_input" name="radioTest" checked id="input_radio_06" />
+                    <label for="input_radio_06">라디오 초기 checked</label>
+                  </div>
+                  <div class="bl_radioCheck__inner bl_radioCheck_sr2">
+                    <input type="radio" class="el_input" name="radioTest" id="input_radio_07" />
+                    <label for="input_radio_07">라디오 ㅇㅅㅇ</label>
+                  </div>
+                  <div class="bl_radioCheck__inner bl_radioCheck_sr3">
+                    <input type="radio" class="el_input" name="radioTest" id="input_radio_08" />
+                    <label for="input_radio_08">라디오 ㅇㅅㅇ</label>
+                  </div>
+                  <div class="bl_radioCheck__inner bl_radioCheck_sr4">
+                    <input type="radio" class="el_input" name="radioTest" id="input_radio_09" />
+                    <label for="input_radio_09">라디오 ㅇㅅㅇ</label>
+                  </div>
+                  <div class="bl_radioCheck__inner bl_radioCheck_sr5">
+                    <input type="radio" class="el_input" name="radioTest" id="input_radio_10" />
+                    <label for="input_radio_10">라디오 ㅇㅅㅇ</label>
+                  </div>
+                </div>
+              <!-- //샘플태그 입력 -->
+            </pre>
+					</div>
+					<!-- //샘플코드 -->
+				</div>
+				<!-- //샘플 -->
+			</div>
+		</div>
+		<!-- // checkbox / radio -->
+
+		<!-- Input Box -->
+		<div class="sample-section">
+			<h1 class="h1-title">Input Box / textarea</h1>
+
+			<div class="sample-section__list">
+				<h2 class="h2-title">
+					클래스명 :
+					<code class="use-tag__code use-tag__code--class">.bl_input</code>
+					<code class="use-tag__code use-tag__code--class">.bl_input--flex</code>
+				</h2>
+				<p class="use-tag">사용태그 : <code class="use-tag__code">&lt;Element: input(text, password, search, tel, number, email), textarea&gt;</code><br /></p>
+				<p class="use-tag">옵션(시리즈) : <code class="use-tag__code">.el_input_sm</code> <code class="use-tag__code">.el_input_me</code> <code class="use-tag__code">.el_input_la</code></p>
+				<!-- 샘플 -->
+				<div class="sample-group">
+					<!-- 샘플태그 -->
+					<div class="sample-tag">
+						<p>Use</p>
+						<div class="sample-tag__tag-list">
+							<!-- 샘플태그 입력 -->
+							<p>타입별 사용</p>
+							<div class="bl_input">
+								<div class="bl_input__inner">
+									<div class="bl_input__item">
+										<div class="bl_input__closebtnWrap">
+											<input type="text" class="el_input el_input_sm" placeholder="type text: small" />
+											<button type="button" class="el_btn el_btn--inputClose js_inputValueDelete" aria-label="작성내용 삭제"></button>
+										</div>
+									</div>
+									<div class="bl_input__item">
+										<div class="bl_input__closebtnWrap">
+											<input type="password" class="el_input el_input_me" placeholder="type password: medium" />
+											<button type="button" class="el_btn el_btn--inputClose js_inputValueDelete" aria-label="작성내용 삭제"></button>
+										</div>
+									</div>
+									<div class="bl_input__item">
+										<div class="bl_input__closebtnWrap">
+											<input type="search" class="el_input el_input_la" inputmode="search" enterkeyhint="search" placeholder="type search: large" />
+											<button type="button" class="el_btn el_btn--inputClose js_inputValueDelete" aria-label="작성내용 삭제"></button>
+										</div>
+									</div>
+									<div class="bl_input__item">
+										<div class="bl_input__closebtnWrap">
+											<input type="email" class="el_input el_input_me" inputmode="email" placeholder="type email" />
+											<button type="button" class="el_btn el_btn--inputClose js_inputValueDelete" aria-label="작성내용 삭제"></button>
+										</div>
+									</div>
+									<div class="bl_input__item">
+										<div class="bl_input__closebtnWrap">
+											<input type="number" class="el_input el_input_me" inputmode="numeric" placeholder="type number" />
+											<button type="button" class="el_btn el_btn--inputClose js_inputValueDelete" aria-label="작성내용 삭제"></button>
+										</div>
+									</div>
+									<div class="bl_input__item">
+										<div class="bl_input__closebtnWrap">
+											<input type="tel" class="el_input el_input_me" inputmode="tel" placeholder="type tel" />
+											<button type="button" class="el_btn el_btn--inputClose js_inputValueDelete" aria-label="작성내용 삭제"></button>
+										</div>
+									</div>
+									<div class="bl_input__item">
+										<input type="password" class="el_input el_input_me" inputmode="none" placeholder="앱에서 보안키보드 개발연동시에 사용: readonly는 포커스가 안가는 이슈가 있음 " />
+									</div>
+
+									<div class="bl_input__item">
+										<div class="bl_input__closebtnWrap">
+											<input type="text" class="el_input el_input_sm" disabled placeholder="disabled 케이스" />
+										</div>
+									</div>
+									<div class="bl_input__item">
+										<div class="bl_input__closebtnWrap">
+											<input type="text" class="el_input el_input_sm" readonly placeholder="readonly 케이스" />
+										</div>
+									</div>
+
+									<div class="bl_input__item">
+										<textarea class="el_input" rows="10" cols="10" placeholder="textarea: default height: 150px"></textarea>
+									</div>
+								</div>
+							</div>
+							<!-- // 샘플태그 입력 -->
+						</div>
+						<!-- 샘플코드 -->
+						<div class="sample-code">
+							<p>Tag</p>
+							<pre class="brush: html;">
+                  <!-- 샘플태그 입력 -->
+                  <div class="bl_input">
+                    <div class="bl_input__inner">
+                      <div class="bl_input__item">
+                        <div class="bl_input__closebtnWrap">
+                          <input type="text" class="el_input el_input_sm" placeholder="type text" />
+                          <button type="button" class="el_btn el_btn--inputClose js_inputValueDelete" aria-label="작성내용 삭제"></button>
+                        </div>
+                      </div>
+                      <div class="bl_input__item">
+                        <div class="bl_input__closebtnWrap">
+                          <input type="password" class="el_input el_input_me" placeholder="type password" />
+                          <button type="button" class="el_btn el_btn--inputClose js_inputValueDelete" aria-label="작성내용 삭제"></button>
+                        </div>
+                      </div>
+                      <div class="bl_input__item">
+                        <div class="bl_input__closebtnWrap">
+                          <input type="search" class="el_input el_input_la" inputmode="search" enterkeyhint="search" placeholder="type search" />
+                          <button type="button" class="el_btn el_btn--inputClose js_inputValueDelete" aria-label="작성내용 삭제"></button>
+                        </div>
+                      </div>
+                      <div class="bl_input__item">
+                        <div class="bl_input__closebtnWrap">
+                          <input type="email" class="el_input el_input_me" inputmode="email" placeholder="type email" />
+                          <button type="button" class="el_btn el_btn--inputClose js_inputValueDelete" aria-label="작성내용 삭제"></button>
+                        </div>
+                      </div>
+                      <div class="bl_input__item">
+                        <div class="bl_input__closebtnWrap">
+                          <input type="number" class="el_input el_input_me" inputmode="numeric" placeholder="type number" />
+                          <button type="button" class="el_btn el_btn--inputClose js_inputValueDelete" aria-label="작성내용 삭제"></button>
+                        </div>
+                      </div>
+                      <div class="bl_input__item">
+                        <div class="bl_input__closebtnWrap">
+                          <input type="tel" class="el_input el_input_me" inputmode="tel" placeholder="type tel" />
+                          <button type="button" class="el_btn el_btn--inputClose js_inputValueDelete" aria-label="작성내용 삭제"></button>
+                        </div>
+                      </div>
+                      <div class="bl_input__item">
+                        <input type="password" class="el_input el_input_me" inputmode="none" placeholder="앱에서 보안키보드 개발연동시에 사용: readonly는 포커스가 안가는 이슈가 있음 " />
+                      </div>
+
+                      <div class="bl_input__item">
+                        <textarea class="el_input" rows="10" cols="10" placeholder="textarea: default height: 150px"></textarea>
+                      </div>
+                    </div>
+                    js_inputValueDelete 버튼 사용시에는 해당 태그와 input이 bl_input_closebt_nWrap에 감싸져야합니다
+                </div>
+                  <!-- //샘플태그 입력 -->
+                </pre>
+						</div>
+						<!-- // 샘플코드 -->
+					</div>
+				</div>
+
+				<!-- 샘플 -->
+				<div class="sample-group">
+					<!-- 샘플태그 -->
+					<div class="sample-tag">
+						<div class="sample-tag__tag-list">
+							<p>라벨 제목 사용시</p>
+							<div class="bl_input">
+								<label for="aaaa" class="bl_input__label">라벨 제목 세로 </label>
+								<div class="bl_input__inner">
+									<div class="bl_input__item">
+										<input type="text" class="el_input el_input_me" id="aaaa" placeholder="placeholder 문구" />
+									</div>
+								</div>
+							</div>
+
+							<div class="bl_input">
+								<label for="aaaa" class="bl_input__label">라벨 제목 세로 </label>
+								<div class="bl_input__inner">
+									<div class="bl_input__item">
+										<textarea class="el_input" rows="10" cols="10" id="aaaa" placeholder="textarea: default height: 150px"></textarea>
+									</div>
+								</div>
+							</div>
+
+							<div class="bl_input">
+								<div class="bl_input__inner bl_input--flex">
+									<div class="bl_input__item">
+										<label for="bbbb" class="bl_input__label">라벨 제목 가로 </label>
+										<input type="text" class="el_input el_input_me" id="bbbb" placeholder="placeholder 문구" />
+									</div>
+								</div>
+							</div>
+							<div class="bl_input">
+								<div class="bl_input__inner bl_input--flex">
+									<div class="bl_input__item bl_input--nowrap">
+										<label for="bbbb" class="bl_input__label">라벨 제목 가로 </label>
+										<textarea class="el_input" rows="10" cols="10" id="aaaa" placeholder="textarea: default height: 150px"></textarea>
+									</div>
+								</div>
+							</div>
+
+							<div class="bl_input">
+								<div class="bl_input__label">라벨 제목 그룹핑</div>
+
+								<div class="bl_input__inner">
+									<div class="bl_input__item">
+										<label for="bbbb" class="bl_input__label">라벨 제목 가로 1 </label>
+										<input type="text" class="el_input el_input_me" id="bbbb" placeholder="placeholder 문구" />
+									</div>
+									<div class="bl_input__item">
+										<label for="bbbb" class="bl_input__label">라벨 제목 가로 2</label>
+										<input type="text" class="el_input el_input_me" id="bbbb" placeholder="placeholder 문구" />
+									</div>
+									<div class="bl_input__item">
+										<div class="bl_radioCheck">
+											<div class="bl_radioCheck__inner bl_radioCheck_sr">
+												<input type="checkbox" class="el_input" id="label_checkboxinput" />
+												<label for="label_checkboxinput">체크박스와 인풋</label>
+											</div>
+										</div>
+										<input type="text" class="el_input el_input_me" id="bbbb" placeholder="placeholder 문구" />
+									</div>
+									<div class="bl_input__item">
+										<div class="bl_radioCheck">
+											<div class="bl_radioCheck__inner bl_radioCheck_sr">
+												<input type="radio" class="el_input" id="label_radioinput" />
+												<label for="label_radioinput">라디오와 인풋</label>
+											</div>
+										</div>
+										<input type="text" class="el_input el_input_me" id="bbbb" placeholder="placeholder 문구" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- // 샘플태그 -->
+					<!-- 샘플코드 -->
+					<div class="sample-code">
+						<p>Tag</p>
+						<pre class="brush: html;">
+                <!-- 샘플태그 입력 -->
+                <div class="bl_input">
+                  <label for="aaaa" class="bl_input__label">라벨 제목 세로 </label>
+                  <div class="bl_input__inner">
+                    <div class="bl_input__item">
+                      <input type="text" class="el_input el_input_me" id="aaaa" placeholder="placeholder 문구" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bl_input">
+                  <label for="aaaa" class="bl_input__label">라벨 제목 세로 </label>
+                  <div class="bl_input__inner">
+                    <div class="bl_input__item">
+                      <textarea class="el_input" rows="10" cols="10" id="aaaa" placeholder="textarea: default height: 150px"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bl_input">
+                  <div class="bl_input__inner bl_input--flex">
+                    <div class="bl_input__item">
+                      <label for="bbbb" class="bl_input__label">라벨 제목 가로 </label>
+                      <input type="text" class="el_input el_input_me" id="bbbb" placeholder="placeholder 문구" />
+                    </div>
+                  </div>
+                </div>
+                <div class="bl_input">
+                  <div class="bl_input__inner bl_input--flex">
+                    <div class="bl_input__item bl_input--nowrap">
+                      <label for="bbbb" class="bl_input__label">라벨 제목 가로 </label>
+                      <textarea class="el_input" rows="10" cols="10" id="aaaa" placeholder="textarea: default height: 150px"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bl_input">
+                  <div class="bl_input__label">라벨 제목 그룹핑</div>
+
+                  <div class="bl_input__inner">
+                    <div class="bl_input__item">
+                      <label for="bbbb" class="bl_input__label">라벨 제목 가로 1 </label>
+                      <input type="text" class="el_input el_input_me" id="bbbb" placeholder="placeholder 문구" />
+                    </div>
+                    <div class="bl_input__item">
+                      <label for="bbbb" class="bl_input__label">라벨 제목 가로 2</label>
+                      <input type="text" class="el_input el_input_me" id="bbbb" placeholder="placeholder 문구" />
+                    </div>
+                        <div class="bl_input__item">
+                      <div class="bl_radioCheck">
+                        <div class="bl_radioCheck__inner bl_radioCheck_sr">
+                          <input type="checkbox" class="el_input" id="label_checkboxinput" />
+                          <label for="label_checkboxinput">체크박스와 인풋</label>
+                        </div>
+                      </div>
+                      <input type="text" class="el_input el_input_me" id="bbbb" placeholder="placeholder 문구" />
+                    </div>
+                    <div class="bl_input__item">
+                      <div class="bl_radioCheck">
+                        <div class="bl_radioCheck__inner bl_radioCheck_sr">
+                          <input type="radio" class="el_input" id="label_radioinput" />
+                          <label for="label_radioinput">라디오와 인풋</label>
+                        </div>
+                      </div>
+                      <input type="text" class="el_input el_input_me" id="bbbb" placeholder="placeholder 문구" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- //샘플태그 입력 -->
+              </pre>
+					</div>
+					<!-- // 샘플코드 -->
+				</div>
+				<!-- // 샘플 -->
+
+				<!-- 샘플 -->
+				<div class="sample-group">
+					<!-- 샘플태그 -->
+					<div class="sample-tag">
+						<div class="sample-tag__tag-list">
+							<p>flex (균등분할, 개별영역 지정: 별도의 클래스를 지정해서 width가 아닌, flex속성으로 지정 )</p>
+							<div class="sample-tag">
+								<div class="sample-tag__tag-list">
+									<div class="bl_input">
+										<label for="id01" class="bl_input__label">라벨 제목</label>
+										<div class="bl_input__inner bl_input--flex">
+											<div class="bl_input__item">
+												<input type="text" class="el_input el_input_me" id="id01" placeholder="placeholder 문구" />
+											</div>
+											<span class="bl_input__subText">~</span>
+											<div class="bl_input__item">
+												<input type="text" class="el_input el_input_me" id="id01" placeholder="placeholder 문구" />
+											</div>
+											<span class="bl_input__subText">~</span>
+											<div class="bl_input__item">
+												<input type="text" class="el_input el_input_me" id="id01" placeholder="placeholder 문구" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 샘플태그 -->
+					</div>
+					<!-- 샘플코드 -->
+					<div class="sample-code">
+						<p>Tag</p>
+						<pre class="brush: html;">
+                <!-- 샘플태그 입력 -->
+                    <div class="bl_input">
+                      <label for="id01" class="bl_input__label">라벨 제목</label>
+                      <div class="bl_input__inner bl_input--flex">
+                        <div class="bl_input__item">
+                          <input type="text" class="el_input el_input_me" id="id01" placeholder="placeholder 문구" />
+                        </div>
+                        <span class="bl_input__subText">~</span>
+                        <div class="bl_input__item">
+                          <input type="text" class="el_input el_input_me" id="id01" placeholder="placeholder 문구" />
+                        </div>
+                        <span class="bl_input__subText">~</span>
+                        <div class="bl_input__item">
+                          <input type="text" class="el_input el_input_me" id="id01" placeholder="placeholder 문구" />
+                        </div>
+                      </div>
+                    </div>
+                <!-- //샘플태그 입력 -->
+              </pre>
+					</div>
+					<!-- // 샘플코드 -->
+				</div>
+				<!-- // 샘플 -->
+
+				<!-- 샘플 -->
+				<div class="sample-group">
+					<!-- 샘플태그 -->
+					<div class="sample-tag">
+						<div class="sample-tag__tag-list">
+							<p>유효성 텍스트</p>
+							<div class="bl_input">
+								<div class="bl_input__inner">
+									<div class="bl_input__item">
+										<input type="text" class="el_input el_input_me" placeholder="placeholder 문구" />
+										<em class="bl_input__validationMsg bl_input__validationMsg--valid">유효성 메시지: 사용가능한 아이디 입니다.</em>
+									</div>
+									<div class="bl_input__item bl_input__item--error">
+										<input type="text" class="el_input el_input_me" placeholder="placeholder 문구" />
+										<em class="bl_input__validationMsg bl_input__validationMsg--error">유효성 메시지: 필수입력값입니다.</em>
+									</div>
+									<div class="bl_input__item bl_input__item--error">
+										<textarea class="el_input" rows="10" cols="10" id="aaaa" placeholder="textarea: default height: 150px"></textarea>
+										<em class="bl_input__validationMsg bl_input__validationMsg--error">유효성 메시지: 필수입력값입니다.</em>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- // 샘플태그 -->
+					</div>
+					<!-- 샘플코드 -->
+					<div class="sample-code">
+						<p>Tag</p>
+						<pre class="brush: html;">
+                <!-- 샘플태그 입력 -->
+                <div class="bl_input">
+                  <div class="bl_input__inner">
+                    <div class="bl_input__item">
+                      <input type="text" class="el_input el_input_me" placeholder="placeholder 문구" />
+                      <em class="bl_input__validationMsg bl_input__validationMsg--valid">유효성 메시지: 사용가능한 아이디 입니다.</em>
+                    </div>
+                    <div class="bl_input__item bl_input__item--error">
+                      <input type="text" class="el_input el_input_me" placeholder="placeholder 문구" />
+                      <em class="bl_input__validationMsg bl_input__validationMsg--error">유효성 메시지: 필수입력값입니다.</em>
+                    </div>
+                    <div class="bl_input__item bl_input__item--error">
+                      <textarea class="el_input" rows="10" cols="10" id="aaaa" placeholder="textarea: default height: 150px"></textarea>
+                      <em class="bl_input__validationMsg bl_input__validationMsg--error">유효성 메시지: 필수입력값입니다.</em>
+                    </div>
+
+                    bl_input__item--error 클래스는 개발에서 붙여주는 클래스 입니다. 
+                    마크업시에는 적지 않습니다.  
+                    bl_input__validationMsg 마크업은 개발로 적용되어서 들어가기에, 위치만 참고해주세요.
+
+                  </div>
+                </div>
+                <!-- //샘플태그 입력 -->
+              </pre>
+					</div>
+					<!-- // 샘플코드 -->
+				</div>
+				<!-- // 샘플 -->
+
+				<!-- 샘플 -->
+				<div class="sample-group">
+					<div class="sample-tag">
+						<div class="sample-tag__tag-list">
+							<p>버튼이 같이 붙는 경우</p>
+							<!-- 샘플태그 -->
+
+							<div class="bl_input">
+								<div class="bl_input__inner">
+									<div class="bl_input__item">
+										<button type="button" class="el_btn el_btn_xs el_bgGry60">나는 버튼</button>
+										<input type="text" class="el_input el_input_me" placeholder="placeholder 문구" />
+									</div>
+								</div>
+
+								<div class="bl_input__inner">
+									<div class="bl_input__item bl_input--nowrap">
+										<textarea class="el_input" rows="10" cols="10" id="aaaa" placeholder="textarea: default height: 150px"></textarea>
+										<button type="button" class="el_btn el_btn_xs el_bgGry60">나는 버튼</button>
+									</div>
+								</div>
+
+								<div class="bl_input__inner">
+									<div class="bl_input__item">
+										<div class="bl_input__closebtnWrap">
+											<input type="text" class="el_input el_input_me" placeholder="placeholder 문구" />
+											<button type="button" class="el_btn el_btn--inputClose js_inputValueDelete" aria-label="작성내용 삭제"></button>
+										</div>
+										<button type="button" class="el_btn el_btn_xs el_bgGry60">너는 버튼</button>
+									</div>
+								</div>
+
+								<div class="bl_input__inner bl_input--flex">
+									<div class="bl_input__item">
+										<input type="text" class="el_input el_input_me" placeholder="placeholder 문구" />
+										<button type="button" class="el_btn el_btn_xs el_bgGry60">얘는 버튼</button>
+									</div>
+									<div class="bl_input__item">
+										<input type="text" class="el_input el_input_me" placeholder="placeholder 문구" />
+										<button type="button" class="el_btn el_btn_xs el_bgGry60">쟤도 버튼</button>
+									</div>
+								</div>
+							</div>
+							<!-- // 샘플태그 -->
+
+							<!-- 샘플코드 -->
+							<div class="sample-code">
+								<p>Tag</p>
+								<pre class="brush: html;">
+                  <!-- 샘플태그 -->
+                  <div class="bl_input">
+                    <div class="bl_input__inner">
+                    <div class="bl_input__item">
+                      <button type="button" class="el_btn el_btn_xs el_bgGry60">나는 버튼</button>
+                      <input type="text" class="el_input el_input_me" placeholder="placeholder 문구" />
+                    </div>
+                  </div>
+
+                  <div class="bl_input__inner">
+                    <div class="bl_input__item bl_input--nowrap">
+                      <textarea class="el_input" rows="10" cols="10" id="aaaa" placeholder="textarea: default height: 150px"></textarea>
+                      <button type="button" class="el_btn el_btn_xs el_bgGry60">나는 버튼</button>
+                    </div>
+                  </div>
+
+                  <div class="bl_input__inner">
+                    <div class="bl_input__item">
+                      <div class="bl_input__closebtnWrap">
+                        <input type="text" class="el_input el_input_me" placeholder="placeholder 문구" />
+                        <button type="button" class="el_btn el_btn--inputClose js_inputValueDelete" aria-label="작성내용 삭제"></button>
+                      </div>
+                      <button type="button" class="el_btn el_btn_xs el_bgGry60">너는 버튼</button>
+                    </div>
+                  </div>
+
+                  <div class="bl_input__inner bl_input--flex">
+                    <div class="bl_input__item">
+                      <input type="text" class="el_input el_input_me" placeholder="placeholder 문구" />
+                      <button type="button" class="el_btn el_btn_xs el_bgGry60">얘는 버튼</button>
+                    </div>
+                    <div class="bl_input__item">
+                      <input type="text" class="el_input el_input_me" placeholder="placeholder 문구" />
+                      <button type="button" class="el_btn el_btn_xs el_bgGry60">쟤도 버튼</button>
+                    </div>
+                  </div>
+
+                    버튼의 길이 고정시에는 별도의 클래스 생성 후 flex 속성으로 제어해주세요 (width 사용 금지)
+                    버튼 사이즈나 input의 height 중, 큰 값기준으로 height가 같아집니다 (align-items: stretch)
+                  </div>
+                  <!-- // 샘플태그 -->
+              </pre>
+							</div>
+							<!-- // 샘플코드 -->
+						</div>
+					</div>
+				</div>
+				<!-- //샘플 -->
+			</div>
+		</div>
+		<!-- // Input Box -->
+
+		<!-- E-mail Box -->
+		<div class="sample-section">
+			<h1 class="h1-title">E-mail Box</h1>
+
+			<div class="sample-section__list">
+				<h2 class="h2-title">
+					클래스명 :
+					<code class="use-tag__code use-tag__code--class">.bl_input</code>
+					<code class="use-tag__code use-tag__code--class">.bl_input__inner.bl_input--flex</code>
+				</h2>
+				<p class="use-tag">사용태그 : <code class="use-tag__code">&lt;Element (selectric 플러그인 사용)&gt;</code><br /></p>
+				<p class="use-tag">옵션(시리즈) :</p>
+				<!-- 샘플 -->
+				<div class="sample-group">
+					<!-- 샘플태그 -->
+					<div class="sample-tag">
+						<p>Use</p>
+						<div class="sample-tag__tag-list">
+							<!-- 샘플태그 입력 -->
+							<div class="bl_input">
+								<label for="idemail" class="bl_input__label">이메일</label>
+								<div class="bl_input__inner bl_input--flex">
+									<div class="bl_input__item">
+										<input type="text" class="el_input el_input_me" id="idemail" placeholder="메일주소" />
+									</div>
+									<span class="bl_input__subText">@</span>
+									<div class="bl_input__item">
+										<div class="bl_selectBox bl_selectBox--me">
+											<select class="js_selectBtn" name="" id="input_email_03">
+												<option value="input_email_03_01" selected>직접 입력</option>
+												<option value="input_email_03_02">naver</option>
+												<option value="input_email_03_03">gmail</option>
+												<option value="input_email_03_04">nate</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //샘플태그 -->
+
+						<!-- 샘플코드 -->
+						<div class="sample-code">
+							<p>Tag</p>
+							<pre class="brush: html;">
+              <!-- 샘플태그 입력 -->
+                <div class="bl_input">
+                  <label for="idemail" class="bl_input__label">이메일</label>
+                  <div class="bl_input__inner bl_input--flex">
+                    <div class="bl_input__item">
+                      <input type="text" class="el_input el_input_me" id="idemail" placeholder="메일주소" />
+                    </div>
+                    <span class="bl_input__subText">@</span>
+                    <div class="bl_input__item">
+                      <div class="bl_selectBox bl_selectBox--me">
+                        <select class="js_selectBtn" name="" id="input_email_03">
+                          <option value="input_email_03_01" selected>직접 입력</option>
+                          <option value="input_email_03_02">naver</option>
+                          <option value="input_email_03_03">gmail</option>
+                          <option value="input_email_03_04">nate</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //  샘플태그 입력 -->
+            </pre>
+							<!-- //샘플코드 -->
+						</div>
+						<!-- //샘플 -->
+					</div>
+				</div>
+				<!-- // E-mail Box -->
+			</div>
+		</div>
+
+		<!-- 파일첨부 -->
+		<div class="sample-section">
+			<h1 class="h1-title">File box</h1>
+
+			<div class="sample-section__list">
+				<h2 class="h2-title">
+					클래스명 :
+					<code class="use-tag__code use-tag__code--class">.bl_input.bl_input--fileBox</code>
+				</h2>
+				<p class="use-tag">사용태그 : <code class="use-tag__code">&lt;Element&gt;</code><br /></p>
+				<p class="use-tag">
+					옵션 :
+					<!-- <code class="use-tag__code">bl_fileBox</code>,
+            <code class="use-tag__code">el_uploadName</code> -->
+				</p>
+				<!-- Guide Code -->
+				<div class="sample-group">
+					<!-- View Tag -->
+					<div class="sample-tag">
+						<p>Use</p>
+						<div class="sample-tag__tag-list">
+							<!-- 샘플태그 입력 -->
+							<div class="bl_input bl_input--fileBox">
+								<label for="inputFile" class="bl_input__label">사진등록</label>
+								<div class="bl_input__inner">
+									<div class="bl_input__item">
+										<input type="file" class="el_input js_inputFile" id="inputFile" />
+										<input inputmode="none" tabindex="-1" readonly class="bl_input--fileBox__label el_input_me" placeholder="파일첨부" />
+										<label tabindex="1" for="inputFile" class="el_btn el_btn_xs el_prCor10">찾아보기</label>
+									</div>
+								</div>
+
+								<div class="bl_input__inner">
+									<div class="bl_input__item">
+										<label for="inputFile02" class="bl_input__label">사진등록</label>
+										<input type="file" class="el_input js_inputFile" id="inputFile02" />
+										<input inputmode="none" tabindex="-1" readonly class="bl_input--fileBox__label el_input_la" placeholder="파일첨부" />
+										<label tabindex="1" for="inputFile02" class="el_btn el_btn_xs el_prCor10">찾아보기</label>
+									</div>
+								</div>
+							</div>
+							<!-- //샘플태그 입력 -->
+						</div>
+					</div>
+					<!-- // View Tag -->
+
+					<!-- 사용코드 -->
+					<div class="sample-code">
+						<p>Tag</p>
+						<pre class="brush: html;">
+                <!-- 샘플태그 입력 -->
+                <div class="bl_input bl_input--fileBox">
+                  <label for="inputFile03" class="bl_input__label">사진등록</label>
+                  <div class="bl_input__inner">
+                    <div class="bl_input__item">
+                      <input type="file" class="js_inputFile" id="inputFile03" />
+                      <input inputmode="none" tabindex="-1" readonly class="bl_input--fileBox__label el_input_me" placeholder="파일첨부" />
+                      <label tabindex="1" for="inputFile03"$ class="el_btn el_btn_xs el_prCor10">찾아보기</label>
+                    </div>
+                  </div>
+
+                  <div class="bl_input__inner">
+                    <div class="bl_input__item">
+                      <label for="inputFile04" class="bl_input__label">사진등록</label>
+                      <input type="file" class="js_inputFile" id="inputFile04" />
+                      <input inputmode="none" tabindex="-1" readonly class="bl_input--fileBox__label el_input_la" placeholder="파일첨부" />
+                      <label tabindex="1" for="inputFile04" class="el_btn el_btn_xs el_prCor10">찾아보기</label>
+                    </div>
+                  </div>
+                </div>
+                <!-- // 샘플태그 입력 -->
+                </pre>
+					</div>
+					<!-- // 사용코드 -->
+				</div>
+				<!-- // Guide Code -->
+			</div>
+		</div>
+		<!-- // 파일첨부 -->
+
+		<!-- radiobox -->
+		<div class="sample-section" style="display: none">
+			<h1 class="h1-title">bl_radioCheck</h1>
+
+			<div class="sample-section__list">
+				<h2 class="h2-title">
+					클래스명 :
+					<code class="use-tag__code use-tag__code--class">bl_radioCheck</code>
+				</h2>
+				<p class="use-tag">사용태그 : <code class="use-tag__code">&lt;Element&gt;</code><br /></p>
+				<p class="use-tag">
+					옵션 :
+					<code class="use-tag__code">bl_radioCheck</code>, <code class="use-tag__code">bl_radioCheck_sr</code>,
+					<code class="use-tag__code">bl_radioCheck_sr2</code>
+				</p>
+				<!-- Guide Code -->
+				<div class="sample-group">
+					<!-- View Tag -->
+					<div class="sample-tag">
+						<p>Use</p>
+						<div class="sample-tag__tag-list">
+							<!-- 샘플태그 입력 -->
+							<div class="bl_input">
+								<label class="bl_input__label" for="input_radio_01">배송지 선택</label>
+
+								<div class="bl_input__innerBox bl_input__innerBox--flex">
+									<label class="bl_radioCheck" for="input_radio_01">
+										<input type="radio" class="el_input" name="input_radio" id="input_radio_01" checked />
+
+										<span class="bl_radioCheck_txt">라디오 버튼 1</span>
+									</label>
+									<label class="bl_radioCheck bl_radioCheck_sr" for="input_radio_02">
+										<input type="radio" class="el_input" name="input_radio" id="input_radio_02" />
+
+										<span class="bl_radioCheck_txt">라디오 버튼 2</span>
+									</label>
+									<label class="bl_radioCheck bl_radioCheck_sr2" for="input_radio_03">
+										<input type="radio" class="el_input" name="input_radio" id="input_radio_03" />
+
+										<span class="bl_radioCheck_txt">라디오 버튼 3</span>
+									</label>
+								</div>
+							</div>
+							<!-- //샘플태그 입력 -->
+						</div>
+					</div>
+					<!-- // View Tag -->
+
+					<!-- 사용코드 -->
+					<div class="sample-code">
+						<p>Tag</p>
+						<pre class="brush: html;">
+                <!-- 샘플태그 입력 -->
+                <div class="bl_input">
+                  <label class="bl_input__label" for="input_radio_01">배송지 선택</label>
+
+                  <div class="bl_input__innerBox bl_input__innerBox--flex">
+                    <label class="bl_radioCheck" for="input_radio_01">
+                      <input type="radio" class="el_input" name="input_radio" id="input_radio_01" checked />
+                      
+                      <span class="bl_radioCheck_txt">라디오 버튼 1</span>
+                    </label>
+                    <label class="bl_radioCheck bl_radioCheck_sr" for="input_radio_02">
+                      <input type="radio" class="el_input" name="input_radio" id="input_radio_02" />
+                      
+                      <span class="bl_radioCheck_txt">라디오 버튼 2</span>
+                    </label>
+                    <label class="bl_radioCheck bl_radioCheck_sr2" for="input_radio_03">
+                      <input type="radio" class="el_input" name="input_radio" id="input_radio_03" />
+                      
+                      <span class="bl_radioCheck_txt">라디오 버튼 3</span>
+                    </label>
+                  </div>
+                </div>
+                <!-- // 샘플태그 입력 -->
+              </pre>
+					</div>
+					<!-- // 사용코드 -->
+				</div>
+				<!-- // Guide Code -->
+			</div>
+		</div>
+		<!-- // radiobox -->
+	</div>
+
+	<script src="../../asset/js/common.js"></script>
+</body>
+
+</html>
