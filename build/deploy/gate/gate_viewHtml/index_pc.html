@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="ko-KR">
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="viewport" content="width=960" />
+	<title class="js_brwtit"></title>
+
+	<link rel="stylesheet" href="../gt_asset/css/markup.css" />
+	<script src="../gt_asset/js/markup.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+</head>
+
+<body class="ly_mainBody">
+	<div class="ly_main_wrap">
+		<!-- header -->
+		<header class="ly_header">
+			<h1 class="ly_header__ttl"></h1>
+			<nav class="ly_header__nav">
+				<a href="./index.html" class="btn btn--link sm hp_colorBlack10">Guide</a>
+				<a href="./index_pc.html" class="btn btn--link sm">PC</a>
+				<a href="#" class="btn btn--link sm" target="_blank">일정표</a>
+			</nav>
+		</header>
+
+		<!-- // header -->
+
+		<div class="ly_main_inner">
+			<!-- mainTitle -->
+			<h1 class="ly_mian_ttl">
+				<p class="el_totalPercent js_totalPercent">0%</p>
+				<p class="el_pageCount">총: <span class="el_totalPage js_totalPage"></span> / 완료: <span class="el_currentPage js_currentPage"></span> / 잔여 : <span class="el_remainPage js_remainPage"></span></p>
+			</h1>
+
+			<!-- // mainTitle -->
+
+			<!-- 현황판 Menu : 마크업 Table List 생성시 Menu 자동 생성-->
+			<section class="bl_sec bl_sec--progress">
+				<ul class="bl_progress">
+					<!-- 메뉴 리스트 동적 생성 -->
+				</ul>
+			</section>
+			<!-- // 현황판 Menu : 마크업 Table List 생성시 Menu 자동 생성 -->
+
+			<!-- { 마크업리스트 그룹 } -->
+
+			<!-- 공통 : DevMode -->
+			<section class="bl_sec js_sec js_secPageCount">
+				<div class="bl_sec__group js_secGroup">
+					<h2 class="bl_sec__ttl bl_sec__ttl--markupTitle">공통</h2>
+					<p class="bl_sec__count">
+						(Complete: <span class="bl_sec__count__current js_complete"></span> / Total: <span class="bl_sec_count__total js_countTotal"></span> )
+						<span class="bl_sec__percent js_sec__percent">0%</span>
+					</p>
+				</div>
+				<!-- 진행상황 범례 -->
+				<div class="bl_labelGroup_wrap">
+					<dl class="bl_labelGroup">
+						<dt class="bl_labelGroup__ttl">진행상황 :</dt>
+						<dd class="bl_labelGroup__list"><span class="el_label el_label--legend">미정</span></dd>
+						<dd class="bl_labelGroup__list"><span class="el_label el_label--legend2">진행</span></dd>
+						<dd class="bl_labelGroup__list"><span class="el_label el_label--legend3">완료</span></dd>
+						<dd class="bl_labelGroup__list"><span class="el_label el_label--legend4">수정</span></dd>
+						<dd class="bl_labelGroup__list"><span class="el_label el_label--legend5">대기</span></dd>
+						<dd class="bl_labelGroup__list"><span class="el_label el_label--legend6">삭제</span></dd>
+						<dd class="bl_labelGroup__list"><span class="el_label el_label--legend7">기존</span></dd>
+						<dd class="bl_labelGroup__list"><span class="el_label el_label--legend8">검수</span></dd>
+					</dl>
+					<a href="#" class="el_top">상단 바로가기</a>
+				</div>
+				<!-- // 진행상황 범례 -->
+
+				<!-- Table -->
+				<table class="bl_markupListTable js_markupListTable">
+					<colgroup>
+						<col style="width: 40px" />
+						<col style="width: auto" />
+						<col style="width: auto" />
+						<col style="width: auto" />
+						<col style="width: auto" />
+						<col style="width: auto" />
+						<col style="width: auto" />
+						<col style="width: 70px" />
+						<col style="width: 70px" />
+						<col style="width: 300px" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>INDEX</th>
+							<th>1 DEPTH</th>
+							<th>2 DEPTH</th>
+							<th>3 DEPTH</th>
+							<th>4 DEPTH</th>
+							<th>DIRECTORY</th>
+							<th>PAGE CODE</th>
+							<th>상태</th>
+							<th>담당자</th>
+							<th>비고</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="bl_markupListTable__center js_trAutoIndex"></td>
+							<td class="">Button</td>
+							<td class=""></td>
+							<td class=""></td>
+							<td class=""></td>
+							<td class="el_dir js_dir">ui_common</td>
+							<td class="el_pageCode js_pageCode">button</td>
+							<td class="bl_markupListTable__state js_bl_markupListTable__state">완료</td>
+							<td class="bl_markupListTable__center"></td>
+							<td class="bl_history"></td>
+						</tr>
+						<tr>
+							<td class="bl_markupListTable__center js_trAutoIndex"></td>
+							<td class="">form</td>
+							<td class=""></td>
+							<td class=""></td>
+							<td class=""></td>
+							<td class="el_dir js_dir">ui_common</td>
+							<td class="el_pageCode js_pageCode">form</td>
+							<td class="bl_markupListTable__state js_bl_markupListTable__state">완료</td>
+							<td class="bl_markupListTable__center"></td>
+							<td class="bl_history"></td>
+						</tr>
+						<tr>
+							<td class="bl_markupListTable__center js_trAutoIndex"></td>
+							<td class="">modal</td>
+							<td class=""></td>
+							<td class=""></td>
+							<td class=""></td>
+							<td class="el_dir js_dir">ui_common</td>
+							<td class="el_pageCode js_pageCode">modal</td>
+							<td class="bl_markupListTable__state js_bl_markupListTable__state">완료</td>
+							<td class="bl_markupListTable__center"></td>
+							<td class="bl_history"></td>
+						</tr>
+						<tr>
+							<td class="bl_markupListTable__center js_trAutoIndex"></td>
+							<td class="">tab</td>
+							<td class=""></td>
+							<td class=""></td>
+							<td class=""></td>
+							<td class="el_dir js_dir">ui_common</td>
+							<td class="el_pageCode js_pageCode">tab</td>
+							<td class="bl_markupListTable__state js_bl_markupListTable__state">완료</td>
+							<td class="bl_markupListTable__center"></td>
+							<td class="bl_history">
+								<dl class="bl_history__list">
+									<dt class="bl_history__date">날짜 (연-월-일)</dt>
+									<dd class="bl_history__disc">수정내용</dd>
+								</dl>
+							</td>
+						</tr>
+						<tr>
+							<td class="bl_markupListTable__center js_trAutoIndex"></td>
+							<td class="">list</td>
+							<td class=""></td>
+							<td class=""></td>
+							<td class=""></td>
+							<td class="el_dir js_dir">ui_common</td>
+							<td class="el_pageCode js_pageCode">list</td>
+							<td class="bl_markupListTable__state js_bl_markupListTable__state">완료</td>
+							<td class="bl_markupListTable__center"></td>
+							<td class="bl_history"></td>
+						</tr>
+						<tr>
+							<td class="bl_markupListTable__center js_trAutoIndex"></td>
+							<td class="">accordion</td>
+							<td class=""></td>
+							<td class=""></td>
+							<td class=""></td>
+							<td class="el_dir js_dir">ui_common</td>
+							<td class="el_pageCode js_pageCode">accordion</td>
+							<td class="bl_markupListTable__state js_bl_markupListTable__state">완료</td>
+							<td class="bl_markupListTable__center"></td>
+							<td class="bl_history"></td>
+						</tr>
+						<tr>
+							<td class="bl_markupListTable__center js_trAutoIndex"></td>
+							<td class="">table</td>
+							<td class=""></td>
+							<td class=""></td>
+							<td class=""></td>
+							<td class="el_dir js_dir">ui_common</td>
+							<td class="el_pageCode js_pageCode">table</td>
+							<td class="bl_markupListTable__state js_bl_markupListTable__state">완료</td>
+							<td class="bl_markupListTable__center"></td>
+							<td class="bl_history"></td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- // Table -->
+			</section>
+
+			<!-- // 공통 : DevMode -->
+
+			<!-- main -->
+			<section class="bl_sec js_sec js_secPageCount">
+				<div class="bl_sec__group js_secGroup">
+					<h2 class="bl_sec__ttl bl_sec__ttl--markupTitle">메인</h2>
+					<p class="bl_sec__count">
+						(Complete: <span class="bl_sec__count__current js_complete"></span> / Total: <span class="bl_sec_count__total js_countTotal"></span> )
+						<span class="bl_sec__percent js_sec__percent">0%</span>
+					</p>
+				</div>
+				<!-- 진행상황 범례 -->
+				<div class="bl_labelGroup_wrap">
+					<dl class="bl_labelGroup">
+						<dt class="bl_labelGroup__ttl">진행상황 :</dt>
+						<dd class="bl_labelGroup__list"><span class="el_label el_label--legend">미정</span></dd>
+						<dd class="bl_labelGroup__list"><span class="el_label el_label--legend2">진행</span></dd>
+						<dd class="bl_labelGroup__list"><span class="el_label el_label--legend3">완료</span></dd>
+						<dd class="bl_labelGroup__list"><span class="el_label el_label--legend4">수정</span></dd>
+						<dd class="bl_labelGroup__list"><span class="el_label el_label--legend5">대기</span></dd>
+						<dd class="bl_labelGroup__list"><span class="el_label el_label--legend6">삭제</span></dd>
+						<dd class="bl_labelGroup__list"><span class="el_label el_label--legend7">기존</span></dd>
+						<dd class="bl_labelGroup__list"><span class="el_label el_label--legend8">검수</span></dd>
+					</dl>
+					<a href="#" class="el_top">상단 바로가기</a>
+				</div>
+				<!-- // 진행상황 범례 -->
+
+				<!-- Table -->
+				<table class="bl_markupListTable js_markupListTable">
+					<colgroup>
+						<col style="width: 40px" />
+						<col style="width: auto" />
+						<col style="width: auto" />
+						<col style="width: auto" />
+						<col style="width: auto" />
+						<col style="width: auto" />
+						<col style="width: auto" />
+						<col style="width: 70px" />
+						<col style="width: 70px" />
+						<col style="width: 300px" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>INDEX</th>
+							<th>1 DEPTHE</th>
+							<th>2 DEPTHE</th>
+							<th>3 DEPTHE</th>
+							<th>4 DEPTHE</th>
+							<th>DIRECTORY</th>
+							<th>PAGE CODE</th>
+							<th>상태</th>
+							<th>담당자</th>
+							<th>비고</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="bl_markupListTable__center js_trAutoIndex"></td>
+							<td class="">Main</td>
+							<td class=""></td>
+							<td class=""></td>
+							<td class=""></td>
+							<td class="el_dir js_dir">main</td>
+							<td class="el_pageCode js_pageCode">MA010000</td>
+							<td class="bl_markupListTable__state js_bl_markupListTable__state">미정</td>
+							<td class="bl_markupListTable__center"></td>
+							<td class="bl_history"></td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- // Table -->
+			</section>
+
+			<!-- // main -->
+
+			<!-- // { 마크업리스트 그룹 } -->
+		</div>
+	</div>
+	<!-- script load -->
+	<script>
+		autoAddTrIndex();
+		listState();
+		listCount();
+		autoGNB();
+		deployMode();
+		historyFields();
+		totalPage();
+	</script>
+	<!-- // script load -->
+</body>
+
+</html>
