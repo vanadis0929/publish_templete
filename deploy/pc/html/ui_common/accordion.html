@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- 구축 asset -->
+	<link rel="stylesheet" href="../../asset/css/common.css" />
+	<link rel="stylesheet" href="../../asset/css/vendors/swiper-bundle-11.0.5.min.css" />
+
+	<script src="../../asset/js/plugins/jquery-3.7.0/jquery-3.7.0.min.js"></script>
+	<script src="../../asset/js/plugins/swiper-bundle-11.0.5/swiper-bundle.min.js"></script>
+
+	<!-- // 구축 asset -->
+
+	<!-- guide css -->
+	<link type="text/css" rel="stylesheet" href="../../../gate/gt_asset/css/SyntaxHighlighter/shCore.css" />
+	<link type="text/css" rel="stylesheet" href="../../../gate/gt_asset/css/SyntaxHighlighter/shCoreDefault.css" />
+	<link type="text/css" rel="stylesheet" href="../../../gate/gt_asset/css/SyntaxHighlighter/shThemeDefault.css" />
+	<!-- // guide css -->
+
+	<!-- guide JS -->
+	<script type="text/javascript" src="../../../gate/gt_asset/js/SyntaxHighlighter/shCore.js"></script>
+	<script type="text/javascript" src="../../../gate/gt_asset/js/SyntaxHighlighter/shBrushXml.js"></script>
+	<script type="text/javascript" src="../../../gate/gt_asset/js/SyntaxHighlighter/shBrushCss.js"></script>
+	<script type="text/javascript" src="../../../gate/gt_asset/js/SyntaxHighlighter/shBrushJScript.js"></script>
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+	<!-- // guide JS -->
+
+	<title>accordion</title>
+</head>
+
+<body>
+	<div class="commonWrap">
+		<h1 class="commonWrap__title">accordion 가이드</h1>
+
+		<!-- Button -->
+		<div class="sample-section">
+			<h1 class="h1-title">accordion</h1>
+
+			<div class="sample-section__list">
+				<h2 class="h2-title">
+					클래스명 : <code class="use-tag__code use-tag__code--class">.bl_accordion</code>
+					<code class="use-tag__code use-tag__code--class">.bl_accordion--animation</code>
+					<code class="use-tag__code use-tag__code--class">.bl_accordion--onlyOneOpen</code>
+				</h2>
+				<h3 class="h3-title">
+					옵션명(.bl_accordion--animation 전용) :
+					<code class="use-tag__code use-tag__code--class">data-duration-time</code>
+					<code class="use-tag__code use-tag__code--class">data-easing</code>
+				</h3>
+
+				<!-- Guide Code -->
+				<div class="sample-group">
+					<!-- View Tag -->
+					<div class="sample-tag">
+						<p>Use</p>
+						<div class="sample-tag__tag-list">
+							<!-- View Tag 입력(HTML) -->
+
+							<p>기본 아코디언</p>
+							<div class="bl_accordion">
+								<div class="bl_accordion__item">
+									<button type="button" class="bl_accordion__title"><span>제목제목</span></button>
+									<div class="bl_accordion__contents">
+										<div class="bl_accordion__contentsInner">
+											내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내 용내용내용내 용 내 용 내 용내용내용 내용내용내용내용내용내용내용내 용내용내용내용내용내용 내용내용내용내용내용내용내용내
+											용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용
+										</div>
+									</div>
+								</div>
+								<div class="bl_accordion__item">
+									<button type="button" class="bl_accordion__title"><span>제목제목</span></button>
+
+									<div class="bl_accordion__contents">
+										<div class="bl_accordion__contentsInner">
+											내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내 용내용내용내 용 내 용 내 용내용내용 내용내용내용내용내용내용내용내 용내용내용내용내용내용 내용내용내용내용내용내용내용내
+											용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용
+										</div>
+									</div>
+								</div>
+								<div class="bl_accordion__item">
+									<button type="button" class="bl_accordion__title"><span>제목제목</span></button>
+
+									<div class="bl_accordion__contents">
+										<div class="bl_accordion__contentsInner">
+											내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내 용내용내용내 용 내 용 내 용내용내용 내용내용내용내용내용내용내용내 용내용내용내용내용내용 내용내용내용내용내용내용내용내
+											용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용
+										</div>
+									</div>
+								</div>
+							</div>
+							<br /><br />
+							<p>애니메이션 적용 bl_accordion--animation 클래스 사용. data-duration-time="ms, s단위로 입력, 기본값 300ms(3s) " data-easing="css easing 값 입력 (기본값: ease)", data-delay="css delay 값 입력 (기본: 0)"</p>
+							<p>easeing은 cubic-bezier(0.18, 0.89, 0.32, 1.28) 이런 easing도 먹습니다.</p>
+							<div class="bl_accordion bl_accordion--animation">
+								<div class="bl_accordion__item">
+									<button type="button" class="bl_accordion__title"><span>제목제목</span></button>
+
+									<div class="bl_accordion__contents">
+										<div class="bl_accordion__contentsInner">
+											내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내 용내용내용내 용 내 용 내 용내용내용 내용내용내용내용내용내용내용내 용내용내용내용내용내용 내용내용내용내용내용내용내용내
+											용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용
+										</div>
+									</div>
+								</div>
+								<div class="bl_accordion__item">
+									<button type="button" class="bl_accordion__title"><span>제목제목</span></button>
+
+									<div class="bl_accordion__contents">
+										<div class="bl_accordion__contentsInner">
+											용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용
+										</div>
+									</div>
+								</div>
+								<div class="bl_accordion__item">
+									<button type="button" class="bl_accordion__title"><span>제목제목</span></button>
+
+									<div class="bl_accordion__contents">
+										<div class="bl_accordion__contentsInner">
+											용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용
+										</div>
+									</div>
+								</div>
+							</div>
+							<br /><br />
+							<p>선택한것만 열리게 bl_accordion--onlyOneOpen 클래스사용</p>
+							<div class="bl_accordion bl_accordion--onlyOneOpen">
+								<div class="bl_accordion__item">
+									<button type="button" class="bl_accordion__title"><span>제목제목</span></button>
+									<div class="bl_accordion__contents">
+										<div class="bl_accordion__contentsInner">
+											내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내 용내용내용내 용 내 용 내 용내용내용 내용내용내용내용내용내용내용내 용내용내용내용내용내용 내용내용내용내용내용내용내용내
+											용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용
+										</div>
+									</div>
+								</div>
+								<div class="bl_accordion__item">
+									<button type="button" class="bl_accordion__title"><span>제목제목</span></button>
+									<div class="bl_accordion__contents">
+										<div class="bl_accordion__contentsInner">
+											내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내 용내용내용내 용 내 용 내 용내용내용 내용내용내용내용내용내용내용내 용내용내용내용내용내용 내용내용내용내용내용내용내용내
+											용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용
+										</div>
+									</div>
+								</div>
+								<div class="bl_accordion__item">
+									<button type="button" class="bl_accordion__title"><span>제목제목</span></button>
+									<div class="bl_accordion__contents">
+										<div class="bl_accordion__contentsInner">
+											내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내 용내용내용내 용 내 용 내 용내용내용 내용내용내용내용내용내용내용내 용내용내용내용내용내용 내용내용내용내용내용내용내용내
+											용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용
+										</div>
+									</div>
+								</div>
+							</div>
+							<br /><br />
+							<p>선택한것만 열리게 + 애니메이션 적용</p>
+							<div class="bl_accordion bl_accordion--onlyOneOpen bl_accordion--animation" data-duration-time="500ms" data-delay="300ms" data-easing="cubic-bezier(0.18, 0.89, 0.32, 1.28)">
+								<div class="bl_accordion__item">
+									<button type="button" class="bl_accordion__title"><span>제목제목</span></button>
+
+									<div class="bl_accordion__contents">
+										<div class="bl_accordion__contentsInner">
+											내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내 용내용내용내 용 내 용 내 용내용내용 내용내용내용내용내용내용내용내 용내용내용내용내용내용 내용내용내용내용내용내용내용내
+											용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용
+										</div>
+									</div>
+								</div>
+								<div class="bl_accordion__item">
+									<button type="button" class="bl_accordion__title"><span>제목제목</span></button>
+
+									<div class="bl_accordion__contents">
+										<div class="bl_accordion__contentsInner">
+											용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용
+										</div>
+									</div>
+								</div>
+								<div class="bl_accordion__item">
+									<button type="button" class="bl_accordion__title"><span>제목제목</span></button>
+
+									<div class="bl_accordion__contents">
+										<div class="bl_accordion__contentsInner">
+											용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- // View Tag 입력(HTML) -->
+						</div>
+					</div>
+					<!-- // View Tag -->
+
+					<!-- 사용코드 -->
+					<div class="sample-code">
+						<p>Tag</p>
+						<pre class="brush: html;">
+                <!-- 사용코드 입력(HTML) -->
+                열려있는 것을 기본값으로 하고 싶은경우: bl_accordion__item 태그에 is-open class 추가 
+                
+
+
+                <p>기본 아코디언</p>
+                <div class="bl_accordion">
+                  <div class="bl_accordion__item">
+                    <button type="button" class="bl_accordion__title"><span>제목제목</span></button>
+                    <div class="bl_accordion__contents">
+                      <div class="bl_accordion__contentsInner">
+                        내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내 용내용내용내 용 내 용 내 용내용내용 내용내용내용내용내용내용내용내 용내용내용내용내용내용 내용내용내용내용내용내용내용내
+                        용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bl_accordion__item">
+                    <button type="button" class="bl_accordion__title"><span>제목제목</span></button>
+
+                    <div class="bl_accordion__contents">
+                      <div class="bl_accordion__contentsInner">
+                        내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내 용내용내용내 용 내 용 내 용내용내용 내용내용내용내용내용내용내용내 용내용내용내용내용내용 내용내용내용내용내용내용내용내
+                        용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bl_accordion__item">
+                    <button type="button" class="bl_accordion__title"><span>제목제목</span></button>
+
+                    <div class="bl_accordion__contents">
+                      <div class="bl_accordion__contentsInner">
+                        내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내 용내용내용내 용 내 용 내 용내용내용 내용내용내용내용내용내용내용내 용내용내용내용내용내용 내용내용내용내용내용내용내용내
+                        용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br /><br />
+                <p>애니메이션 적용</p>
+                <div class="bl_accordion bl_accordion--animation" data-duration-time="200ms" data-easing="ease">
+                  <div class="bl_accordion__item">
+                    <button type="button" class="bl_accordion__title"><span>제목제목</span></button>
+
+                    <div class="bl_accordion__contents">
+                      <div class="bl_accordion__contentsInner">
+                        내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내 용내용내용내 용 내 용 내 용내용내용 내용내용내용내용내용내용내용내 용내용내용내용내용내용 내용내용내용내용내용내용내용내
+                        용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bl_accordion__item">
+                    <button type="button" class="bl_accordion__title"><span>제목제목</span></button>
+
+                    <div class="bl_accordion__contents">
+                      <div class="bl_accordion__contentsInner">
+                        용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bl_accordion__item">
+                    <button type="button" class="bl_accordion__title"><span>제목제목</span></button>
+
+                    <div class="bl_accordion__contents">
+                      <div class="bl_accordion__contentsInner">
+                        용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br /><br />
+                <p>선택한것만 열리게</p>
+                <div class="bl_accordion bl_accordion--onlyOneOpen">
+                  <div class="bl_accordion__item">
+                    <button type="button" class="bl_accordion__title"><span>제목제목</span></button>
+                    <div class="bl_accordion__contents">
+                      <div class="bl_accordion__contentsInner">
+                        내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내 용내용내용내 용 내 용 내 용내용내용 내용내용내용내용내용내용내용내 용내용내용내용내용내용 내용내용내용내용내용내용내용내
+                        용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bl_accordion__item">
+                    <button type="button" class="bl_accordion__title"><span>제목제목</span></button>
+                    <div class="bl_accordion__contents">
+                      <div class="bl_accordion__contentsInner">
+                        내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내 용내용내용내 용 내 용 내 용내용내용 내용내용내용내용내용내용내용내 용내용내용내용내용내용 내용내용내용내용내용내용내용내
+                        용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bl_accordion__item">
+                    <button type="button" class="bl_accordion__title"><span>제목제목</span></button>
+                    <div class="bl_accordion__contents">
+                      <div class="bl_accordion__contentsInner">
+                        내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내 용내용내용내 용 내 용 내 용내용내용 내용내용내용내용내용내용내용내 용내용내용내용내용내용 내용내용내용내용내용내용내용내
+                        용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br /><br />
+                <p>선택한것만 열리게 + 애니메이션 적용</p>
+                <div class="bl_accordion bl_accordion--onlyOneOpen bl_accordion--animation" data-duration-time="300ms" data-easing="ease" data-delay="300ms">
+                  <div class="bl_accordion__item">
+                    <button type="button" class="bl_accordion__title"><span>제목제목</span></button>
+
+                    <div class="bl_accordion__contents">
+                      <div class="bl_accordion__contentsInner">
+                        내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내용내용내용 내용내용내용내용내용내용내 용내용내용내 용 내 용 내 용내용내용 내용내용내용내용내용내용내용내 용내용내용내용내용내용 내용내용내용내용내용내용내용내
+                        용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bl_accordion__item">
+                    <button type="button" class="bl_accordion__title"><span>제목제목</span></button>
+
+                    <div class="bl_accordion__contents">
+                      <div class="bl_accordion__contentsInner">
+                        용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bl_accordion__item">
+                    <button type="button" class="bl_accordion__title"><span>제목제목</span></button>
+
+                    <div class="bl_accordion__contents">
+                      <div class="bl_accordion__contentsInner">
+                        용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용내용
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- // 사용코드 입력(HTML) -->
+              </pre>
+					</div>
+					<!-- // 사용코드 -->
+				</div>
+				<!-- // Guide Code -->
+			</div>
+		</div>
+		<!-- // Button -->
+	</div>
+	<script src="../../asset/js/common.js"></script>
+	<!-- <script>
+      document.addEventListener('click', (event) => {
+        if (event.target.classList[0] === 'el_btn') {
+          window.navigator.clipboard.writeText(event.target.classList.value).then(() => {
+            alert(`버튼 클래스 복사 완료~!!! \n ${event.target.classList.value}`);
+          });
+        }
+      });
+    </script> -->
+</body>
+
+</html>

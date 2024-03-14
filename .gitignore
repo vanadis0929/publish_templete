@@ -6,5 +6,5 @@ _dev/gate/gt_asset/css/
 _dev/pc/html/
 
 #Build 실행시 주석 처리 이후 다시 주석 처리 필요!!
-deploy
-_dev/gate/gate_viewHtml
+# deploy
+# _dev/gate/gate_viewHtml

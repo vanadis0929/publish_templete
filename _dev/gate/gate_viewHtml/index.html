@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="ko-KR">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title class="js_brwtit"></title>
+
+	<link rel="stylesheet" href="../gt_asset/css/markup.css" />
+
+	<script src="../gt_asset/js/markup.js"></script>
+
+	<!-- CSS Guide경로 -->
+	<link type="text/css" rel="stylesheet" href="../gt_asset/css/SyntaxHighlighter/shCoreDefault.css" />
+	<link type="text/css" rel="stylesheet" href="../gt_asset/css/SyntaxHighlighter/shThemeDefault.css" />
+	<!-- //CSS Guide경로 -->
+
+	<!-- Script Guide경로 -->
+	<script type="text/javascript" src="../gt_asset/js/SyntaxHighlighter/shCore.js"></script>
+	<script type="text/javascript" src="../gt_asset/js/SyntaxHighlighter/shBrushXml.js"></script>
+	<script type="text/javascript" src="../gt_asset/js/SyntaxHighlighter/shBrushCss.js"></script>
+	<script type="text/javascript" src="../gt_asset/js/SyntaxHighlighter/shBrushJScript.js"></script>
+	<!-- //Script Guide경로 -->
+
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>
+</head>
+
+<body class="ly_mainBody">
+	<div class="ly_main_wrap">
+		<!-- header -->
+		<header class="ly_header">
+			<h1 class="ly_header__ttl"></h1>
+			<nav class="ly_header__nav">
+				<a href="./index.html" class="btn btn--link sm hp_colorBlack10">Guide</a>
+				<a href="./index_pc.html" class="btn btn--link sm">PC</a>
+				<a href="#" class="btn btn--link sm" target="_blank">일정표</a>
+			</nav>
+		</header>
+
+		<!-- // header -->
+
+		<!-- ly_main_inner -->
+		<div class="ly_main_inner">
+			<h1 class="ly_mian_ttl">
+				<strong class="el_markupGuideTit js_markupGuideTit"></strong>
+				<em class="el_markupVer js_markupVer"></em>
+			</h1>
+
+			<section class="bl_sec">
+				<h2 class="bl_sec__ttl">폴더 정보</h2>
+				<ul class="bl_sec__textBox">
+					<li class="el_iconDash el_iconDash--rc">
+						<img src="../gt_asset/img/guild.jpg" alt="" />
+					</li>
+				</ul>
+			</section>
+
+			<section class="bl_sec">
+				<h2 class="bl_sec__ttl">Precss소개</h2>
+				<a href="https://precss.io/" target="_blank" title="새창열림" class="">https://precss.io/ 규칙을 기반으로 작성</a>
+			</section>
+
+			<section class="bl_sec">
+				<h2 class="bl_sec__ttl">네이밍 규칙</h2>
+				<ul class="bl_sec__textBox">
+					<li class="el_iconDash el_iconDash--rc">Skip 내비게이션을 제외한 나머지 Element는 Class로 작성한다.</li>
+					<li class="el_iconDash el_iconDash--rc">약어 사용가능</li>
+					<li class="el_iconDash el_iconDash--rc">OOCSS, BEM, PRECSS 조합 및 변형</li>
+					<li class="el_iconDash el_iconDash--rc">Class 중첩은 최대 3개를 넘지 않는다.</li>
+					<li class="el_iconDash el_iconDash--rc">클래스 명은 camelCase로만 작성한다.<strong class="el_str">(첫 단어는 소문자 그 다음 단어의 첫 문자는 대문자로 시작)</strong></li>
+				</ul>
+			</section>
+
+			<section class="bl_sec">
+				<h2 class="bl_sec__ttl">주석 규칙</h2>
+				<ul class="bl_sec__textBox">
+					<li class="el_iconDash el_iconDash--rc">
+						HTML 주석 규칙
+						<div class="bl_sec__textBox__line">
+							<pre class="brush: html;">
+								<!-- 주석 시작 -->
+								<div>내용</div>							
+								<!-- // 주석 끝 -->
+							</pre>
+						</div>
+					</li>
+					<li class="el_iconDash el_iconDash--rc">
+						수정 날짜 주석 규칙
+						<div class="bl_sec__textBox__line">
+							<pre class="brush: html;">
+								<!-- YYYY-MM-DD -->
+								2022-11-29 형식으로 작성
+								<!-- // YYYY-MM-DD -->
+							</pre>
+						</div>
+					</li>
+					<li class="el_iconDash el_iconDash--rc">
+						CSS 주석 규칙
+						<div class="bl_sec__textBox__line">
+							<pre class="brush: html;"></pre>
+						</div>
+					</li>
+					<li class="el_iconDash el_iconDash--rc">
+						JS 주석 규칙
+						<div class="bl_sec__textBox__line">
+							<pre class="brush: html;"></pre>
+						</div>
+					</li>
+				</ul>
+			</section>
+
+			<section class="bl_sec">
+				<h2 class="bl_sec__ttl">HTML 파일명 규칙</h2>
+				<ul class="bl_sec__textBox">
+					<li class="el_iconDash el_iconDash--rc">
+						HTML 파일명 규칙
+						<div class="bl_sec__textBox__line">
+							<pre class="brush: html;">
+                MY010000.html
+                MY020000.html
+
+                <!-- 상세설명 -->
+                MY : 페이지 네이밍 약어(MYPAGE)
+                00 : 첫번째 두자리 1Depths 순서
+                00 : 두번째 두자리 2Depths 순서
+                00 : 세번째 두자리 3Depths 순서
+
+                <!-- 파일명 예시 -->
+                MY010000.html : 1Depths
+                MY020000.html : 1Depths
+                  MY020100.html : 1Depths &gt; 2Depths(1)
+                    MY020101.html : 1Depths &gt; 2Depths(1)&gt; 3Depths(1)
+                    MY020102.html : 1Depths &gt; 2Depths(1)&gt; 3Depths(2)
+                    MY020103.html : 1Depths &gt; 2Depths(1)&gt; 3Depths(3)
+                  MY020200.html : 1Depths &gt; 2Depths(2)
+                  MY020300.html : 1Depths &gt; 2Depths(3)
+                    MY020301.html : 1Depths &gt; 2Depths(3)&gt; 3Depths(1)
+                  MY020400.html : 1Depths &gt; 2Depths(4)
+                MY040100.html : 1Depths
+                MY050000.html : 1Depths
+                MY060000.html : 1Depths
+							</pre>
+						</div>
+					</li>
+				</ul>
+			</section>
+
+			<section class="bl_sec">
+				<h2 class="bl_sec__ttl">클래스 네이밍 언더스코어 규칙(UnderScore)</h2>
+				<ul class="bl_sec__textBox">
+					<li class="el_iconDash el_iconDash--rc"><strong class="el_str">'--'</strong> : 더블하이픈(자기 자신의 클래스로 부터 수정된 클래스)</li>
+					<li class="el_iconDash el_iconDash--rc"><strong class="el_str">'__'</strong> : 더블언더스코어(부모의 자식 요소)</li>
+					<li class="el_iconDash el_iconDash--rc"><strong class="el_str">부모와 자식 관계에서 최상위 부모 클래스명을 따라 그 자식에 맞게 클래스 사용</strong></li>
+					<li class="bl_sec__textBox__line">
+						<pre class="brush: html;">
+                <div class="bl_accordionWrap"><!-- wrap -->
+                  <ul class="bl_accordion bl_accordion--round"><!-- bl_accordion : 부모로 지정, bl_accordion--round추가 '--' 수정자 사용 -->
+                    <li class="bl_accordion__list"><!-- bl_accordion의 자식 '__' 사용 -->
+                      <a href="#" class="bl_accordion__link"><!-- bl_accordion의 자식 '__' 사용 -->
+                        <img src="" alt="" class="bl_accordion__img"><!-- bl_accordion의 자식 '__' 사용 -->
+                      </a>
+                    </li>
+                    <li class="bl_accordion__list">
+                      <a href="#" class="bl_accordion__list">
+                        <img src="" alt="" class="bl_accordion__img">
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </pre>
+					</li>
+				</ul>
+			</section>
+
+			<section class="bl_sec">
+				<h2 class="bl_sec__ttl">접두사 예약어 <strong class="el_str">레이아웃 구성단위 : wrap &gt; ly_ &gt; { md} &gt; bl_ &gt; el_</strong></h2>
+				<ul class="bl_sec__textBox">
+					<li class="el_iconDash el_iconDash--rc">ly_ : Layout Module (페이지 레이아웃 구성)</li>
+					<li class="el_iconDash el_iconDash--rc">md_ : Modal Module (레이어 팝업)</li>
+					<li class="el_iconDash el_iconDash--rc">uq_ : Unique Module (특정 페이지) 예 : Error 페이지 uq_error</li>
+					<li class="el_iconDash el_iconDash--rc">bl_ : Block Module</li>
+					<li class="el_iconDash el_iconDash--rc">el_ : Element Module (Block에 속한 element 최소 단위)</li>
+					<li class="el_iconDash el_iconDash--rc">hp_ : Help Module (도우미 !important 사용)</li>
+					<li class="el_iconDash el_iconDash--rc">js_ : 스크립트 예약어( css 에서 스타일링 하지 않음) 최소 부모 Element에 js_ 접두사 사용</li>
+					<li class="bl_sec__textBox__line">
+						<pre class="brush: html;">
+                <!-- 샘플태그 -->
+                <div class="wrap">
+                  <header class="bl_header">
+                    <!-- 둘다 유효 -->
+                    <a href="#" class="el_headerLink">Link</a>
+                    or 
+                    <a href="#" class="bl_header__link">Link</a>
+                    <!-- // 둘다 유효 -->
+
+                    <!-- 범용 개념 -->
+                    <a href="#" class="el_link">범용 링크</a>
+                    <!-- // 범용 개념 -->
+                  </header>
+                  <div class="module js_module"> <!-- 'js_' 접두사 사용(스크립트 제어용 CSS 무) -->
+                    <div class="module__inner">
+                      <span class="hp_blind">텍스트숨김</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal js_module"> <!-- 'js_' 접두사 사용(스크립트 제어용 CSS 무) -->
+                  <div class="modal__inner"></div>
+                </div>
+                <div class="module">
+                  <div class="module__inner"></div>
+                </div>
+                <!-- //샘플태그 -->
+						</pre>
+					</li>
+				</ul>
+			</section>
+
+			<section class="bl_sec">
+				<h2 class="bl_sec__ttl">
+					접미사 범용 Class로 클래스 제일 뒤에 네이밍으로 붙임 (<strong class="el_str">프로젝트 예약어 </strong>)<br />
+            공통을 사용하는 부모로 부터 접근해서 공통을 수정
+				</h2>
+				<ul class="bl_sec__textBox">
+					<li class="el_iconDash el_iconDash--rc">_series : 약어로 사용 &lt; _sr &gt;</li>
+					<li class="el_iconDash el_iconDash--rc">_xxsmall : 약어로 사용 &lt; _xxs &gt;</li>
+					<li class="el_iconDash el_iconDash--rc">_xsmall : 약어로 사용 &lt; _xs &gt;</li>
+					<li class="el_iconDash el_iconDash--rc">_small : 약어로 사용 &lt; _sm &gt;</li>
+					<li class="el_iconDash el_iconDash--rc">_medium : 약어로 사용 &lt; <strong class="el_str">_me:default</strong> &gt;</li>
+					<li class="el_iconDash el_iconDash--rc">_large : 약어로 사용 &lt; _la &gt;</li>
+					<li class="el_iconDash el_iconDash--rc">_xlarge : 약어로 사용 &lt; _xla &gt;</li>
+					<li class="el_iconDash el_iconDash--rc">_xxlarge : 약어로 사용 &lt; _xxla &gt;</li>
+					<li class="el_iconDash el_iconDash--rc">_xxxlarge : 약어로 사용 &lt; _xxxla &gt;</li>
+					<li class="bl_sec__textBox__line">
+						<pre class="brush: html;">
+                <!-- series -->							
+                <button type="button" class="el_btn el_btn--skin_sr">버튼시리즈</button> <!-- el_btn--skin_sr '_sr' 사용-->	
+                <button type="button" class="el_btn el_btn--skin_sr2">버튼시리즈</button> <!-- el_btn--skin_sr '_sr2' 사용-->		
+                <button type="button" class="el_btn el_btn--skin_sr3">버튼시리즈</button> <!-- el_btn--skin_sr '_sr3' 사용-->
+
+                <!-- 아래 시리즈 유효함 -->
+                <button type="button" class="el_btn el_btn_sr">버튼시리즈</button> <!-- el_btn_sr '_sr' 사용-->	
+                <button type="button" class="el_btn el_btn_sr2">버튼시리즈</button> <!-- el_btn_sr '_sr2' 사용-->	
+                <button type="button" class="el_btn el_btn_sr3">버튼시리즈</button> <!-- el_btn_sr '_sr3' 사용-->	
+                
+                <!-- 잘못된 시리즈  : series에서는 '--' 수정자를 사용하지 않음(새로운 시리즈로 추가) -->
+                <button type="button" class="el_btn el_btn_sr el_btn_sr--color">버튼시리즈</button>	
+                <button type="button" class="el_btn el_btn_sr el_btn_sr2--box">버튼시리즈</button>
+                <button type="button" class="el_btn el_btn_sr el_btn_sr3--bold">버튼시리즈</button>               
+                <!-- //series -->
+
+                <!-- size -->
+                <button type="button" class="el_btn el_btn_me">me</button> <!-- el_btn_me '_me' 사용-->
+                <button type="button" class="el_btn el_btn_la">la</button> <!-- el_btn_me '_la' 사용-->
+                <button type="button" class="el_btn el_btn_xla">xla</button> <!-- el_btn_me '_xla' 사용-->
+                <!-- size -->
+
+                <!-- '__'자식 구분자 사용 -->
+                <button type="button" class="el_btn">
+                  <span class="el_btn__text">Text</span> <!-- 유효함 -->
+                </button>
+						</pre>
+					</li>
+				</ul>
+			</section>
+
+			<section class="bl_sec">
+				<h2 class="bl_sec__ttl el_rq">예약어 Class (프로젝트 시작시 <strong class="el_str">필수</strong> 등록)</h2>
+				<ul class="bl_sec__textBox">
+					<li class="el_iconDash el_iconDash--rc">__inner : 자식 Element</li>
+					<li class="el_iconDash el_iconDash--rc">__header : 자식 Element</li>
+					<li class="el_iconDash el_iconDash--rc">__body : 자식 Element</li>
+					<li class="el_iconDash el_iconDash--rc">__footer : 자식 Element</li>
+					<li class="el_iconDash el_iconDash--rc">.el_icon</li>
+					<li class="el_iconDash el_iconDash--rc">.el_btn : {button의 약어}</li>
+					<li class="el_iconDash el_iconDash--rc">.el_rq : {required의 약어}</li>
+					<li class="el_iconDash el_iconDash--rc">.el_bul : {bulet의 약어} : 점, 선, 특수 문자</li>
+					<li class="el_iconDash el_iconDash--rc">.bl_tab : 탭이 여러 종류일 경우 Series로 구성</li>
+					<li class="el_iconDash el_iconDash--rc">.bl_tb : {table의 약어} : 테이블 스타일이 여러 종류일 경우 Series로 구성</li>
+					<li class="bl_sec__textBox__line">
+						<pre class="brush: html;">
+                <!-- 샘플태그	-->
+                <div class="module">
+                  <div class="module__inner">
+                    <div class="module__header"></div>
+                    <div class="module__body"></div>
+                    <div class="module__footer"></div>
+                  </div>
+                </div>
+                <div class="el_icon el_icon--star"></div>
+                <div class="el_btn el_cion--login"></div>
+                <div class="el_rq el_rq--star"></div>
+                <div class="el_bul el_bul--ret"></div>
+                <div class="bl_tab bl_tab_sr">탭 스타일 기본</div>
+                <div class="bl_tab bl_tab_sr2">탭 스타일 2</div>
+                <div class="bl_tb bl_tb_sr">테이블 스타일 기본</div>
+                <div class="bl_tb bl_tb_sr2">테이블 스타일 2</div>
+                <!-- //샘플태그 -->
+              </pre>
+					</li>
+				</ul>
+			</section>
+
+			<section class="bl_sec">
+				<h2 class="bl_sec__ttl el_rq">상태를 표시하는 Class (프로젝트 시작시 <strong class="el_str">필수</strong> 등록)</h2>
+				<ul class="bl_sec__textBox">
+					<li class="el_iconDash el_iconDash--rc">is_active (활성화 / 비활성화)</li>
+					<li class="bl_sec__textBox__line">
+						<pre class="brush: html;">
+                <!-- 샘플태그	-->
+                <div class="is_active"></div>
+                <!-- //샘플태그 -->
+              </pre>
+					</li>
+				</ul>
+			</section>
+
+			<section class="bl_sec">
+				<h2 class="bl_sec__ttl el_rq">Class 조합 예시(el_btn + el_icon)</h2>
+				<ul class="bl_sec__textBox">
+					<li class="el_iconDash el_iconDash--rc">el_btn + el_icon</li>
+					<li class="bl_sec__textBox__line">
+						<pre class="brush: html;">
+                <!-- Class 조합으로 구성 -->
+                <button type="button" class="el_btn el_btn_me el_icon el_icon--close">조합버튼예시</button>
+                <!-- // Class 조합으로 구성 -->
+
+                <!-- style -->
+                .el_btn {
+                  // 버튼 초기화
+                }
+                .el_btn_me {
+                  width: 120px;
+                  height: 44px;
+                  border: 1px solid green;
+                  border-radius: 8px;
+                  background-color: #91b991;
+                }
+                .el_icon {
+                  &::before,
+                  &::after {
+                    content: '';
+                    display: block;
+                    width: 24px;
+                    height: 24px;
+                  }
+                }
+                .el_icon--leftClose {
+                  &::before {
+                    background: url('../../../pc/asset/img/common/btn_cancel.svg') no-repeat 0 0;
+                  }
+                }
+                .el_icon--rightClose {
+                  &::after {
+                    background: url('../../../pc/asset/img/common/btn_cancel.svg') no-repeat 0 0;
+                  }
+                }
+                <!-- // style -->
+              </pre>
+					</li>
+					<li>
+						<button type="button" class="el_btn el_btn_me el_icon el_icon--leftClose">조합버튼예시</button>
+						<button type="button" class="el_btn el_btn_me el_icon el_icon--rightClose">조합버튼예시</button>
+					</li>
+				</ul>
+			</section>
+
+			<section class="bl_sec">
+				<h2 class="bl_sec__ttl el_rq">Z-index 관리 (프로젝트 시작시 <strong class="el_str">필수</strong> 등록) : Z-index는 최소 단위 0부터 50단위씩 증가</h2>
+				<ul class="bl_sec__textBox">
+					<li class="el_iconDash el_iconDash--rc">ly_header = Z-index <strong class="el_str">500</strong></li>
+					<li class="el_iconDash el_iconDash--rc">md_login = Z-index <strong class="el_str">100</strong></li>
+					<li class="el_iconDash el_iconDash--rc">bl_fillter = Z-index <strong class="el_str">150</strong></li>
+				</ul>
+			</section>
+
+			<section class="bl_sec">
+				<h2 class="bl_sec__ttl">Series 넘버링 (아래 리스트는 예시 Class) 첫번째 시리즈는 1번 숫자를 빼고 시작 : Series는 스타일이 비슷한 경우 사용 그외 새로운 유형으로 제작</h2>
+				<ul class="bl_sec__textBox">
+					<li class="el_iconDash el_iconDash--rc">el_icon el_icon--star_sr</li>
+					<li class="el_iconDash el_iconDash--rc">el_icon el_iocn--star_sr2</li>
+					<li class="el_iconDash el_iconDash--rc">el_icon el_icon--star_sr3</li>
+					<li class="el_iconDash el_iconDash--rc">el_icon el_icon--star_sr4</li>
+					<li class="bl_sec__textBox__line">
+						<pre class="brush: html;">
+							<!-- 샘플태그	-->
+							<span class="el_icon el_icon--star_sr"></span>
+							<span class="el_icon el_icon--star_sr2"></span>
+							<span class="el_icon el_icon--star_sr3"></span>
+							<span class="el_icon el_icon--star_sr4"></span>
+							<!-- //샘플태그 -->
+						</pre>
+					</li>
+				</ul>
+			</section>
+			<section class="bl_sec">
+				<h2 class="bl_sec__ttl">마크업 리스트 수정 작성(최신 날짜가 우선)</h2>
+				<ul class="bl_sec__textBox">
+					<li class="el_iconDash el_iconDash--rc">&lt;td class="bl_history&gt; 자식으로 등록</li>
+					<li class="bl_sec__textBox__line">
+						<pre class="brush: html;">
+            <!-- 샘플태그	-->          
+            <dl class="bl_history__list">
+              <dt class="bl_history__date">2022-11-30</dt>
+              <dd class="bl_history__disc">수정 내용 입력수정 내용 입력수정 내용 입력수정 내용 입력수정 내용 입력수정 내용 입력수정 내용 입력</dd>
+            </dl>
+            <!-- //샘플태그 -->
+						</pre>
+					</li>
+				</ul>
+			</section>
+
+			<section class="bl_sec">
+				<h2 class="bl_sec__ttl">Gulp {include, for문 } 사용 방법</h2>
+				<ul class="bl_sec__textBox">
+					<li class="bl_sec__textBox__line">
+						<pre class="brush: html;">
+              <!-- include	-->
+              &#64;&#64;include('../../@include_pc/footer.html')
+              <!-- // include -->
+
+              <!-- for문 -->
+              &#64;&#64;for(var i=0; i&lt;3; i++){ html소스 }
+              <!-- // for문 -->
+
+              <!-- 변수 사용 -->
+              변수 사용 : `+i+`
+              변수 사용 예시 : <span>`+i+`</span>
+              <!-- // 변수 사용 -->
+						</pre>
+					</li>
+				</ul>
+			</section>
+		</div>
+		<!-- // ly_main_inner -->
+	</div>
+	<!-- script load -->
+	<script>
+		projectTitle();
+	</script>
+	<!-- // script load -->
+</body>
+
+</html>
